@@ -125,19 +125,89 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check on scroll
     window.addEventListener('scroll', checkReveal);
     
-    // Contact form submission feedback
+    // EmailJS initialization
+    if (window.emailjs) {
+        emailjs.init({
+            publicKey: "jkLAd8X0aWHM4emed",
+        });
+    }
+    
+    // Contact form submission with EmailJS
     const contactForm = document.querySelector('.contact-form');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            // Form will be handled by Flask route
-            // This is just for additional UI feedback
+            e.preventDefault(); // Prevent form from submitting to server
+            
+            // Update UI to show loading state
             const submitButton = this.querySelector('button[type="submit"]');
             submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitButton.disabled = true;
             
-            // Form will continue submission to server
+            // Get form data
+            const name = this.querySelector('#name').value;
+            const email = this.querySelector('#email').value;
+            const subject = this.querySelector('#subject').value || 'Contact Form Submission';
+            const message = this.querySelector('#message').value;
+            
+            // Prepare template parameters for EmailJS
+            const templateParams = {
+                name: name,
+                email: email,
+                subject: subject,
+                message: message,
+                to_email: 'codebay.agency@gmail.com' // The recipient email
+            };
+            
+            // Send email using EmailJS
+            emailjs.send('default_service', 'template_contact', templateParams)
+                .then(function(response) {
+                    console.log('Email sent successfully:', response);
+                    
+                    // Show success message
+                    showEmailStatus('success', 'Thank you for your message! We will get back to you soon.');
+                    
+                    // Reset form
+                    contactForm.reset();
+                })
+                .catch(function(error) {
+                    console.error('Email failed to send:', error);
+                    
+                    // Show error message
+                    showEmailStatus('error', 'There was a problem sending your message. Please try again later.');
+                })
+                .finally(function() {
+                    // Reset button state
+                    submitButton.innerHTML = 'Send Message';
+                    submitButton.disabled = false;
+                });
         });
+    }
+    
+    // Function to show email status message
+    function showEmailStatus(type, message) {
+        // Create alert element
+        const alertDiv = document.createElement('div');
+        alertDiv.className = `alert alert-${type === 'success' ? 'success' : 'danger'} alert-dismissible fade show mt-3`;
+        alertDiv.role = 'alert';
+        
+        // Add message content
+        alertDiv.innerHTML = `
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        `;
+        
+        // Find the contact form container and insert message after the form
+        const formContainer = document.querySelector('.contact-form-container');
+        formContainer.appendChild(alertDiv);
+        
+        // Auto-dismiss after 5 seconds
+        setTimeout(() => {
+            alertDiv.classList.remove('show');
+            setTimeout(() => {
+                alertDiv.remove();
+            }, 300);
+        }, 5000);
     }
     
     // Flash message auto-dismiss

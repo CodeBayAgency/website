@@ -59,16 +59,18 @@ def coming_soon():
 
 @app.route('/contact', methods=['POST'])
 def contact():
-    """Handle contact form submissions"""
+    """
+    Handle contact form submissions (fallback for non-JavaScript users)
+    Note: Primary contact form submission is now handled by EmailJS
+    """
     try:
         name = request.form.get('name')
         email = request.form.get('email')
         subject = request.form.get('subject', 'Contact Form Submission')
         message = request.form.get('message')
         
-        # In a real application, you would send the email using a service
-        # For now, we'll just log the details
-        logging.info(f"Contact form submission: {name} ({email}): {subject} - {message}")
+        # Log the form submission (this is a fallback in case JavaScript is disabled)
+        logging.info(f"Server-side contact form submission: {name} ({email}): {subject} - {message}")
         
         # Flash a success message
         flash('Thank you for your message! We will get back to you soon.', 'success')
