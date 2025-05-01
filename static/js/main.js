@@ -1,5 +1,5 @@
 /**
- * WebCraft Studio - Website Building Agency
+ * CodeBay - Software Solutions Agency
  * Main JavaScript file for interactive elements
  */
 
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Scroll reveal animation
-    const revealElements = document.querySelectorAll('.service-card, .audience-card, .portfolio-item, .accordion-item');
+    const revealElements = document.querySelectorAll('.service-card, .audience-card, .portfolio-item, .accordion-item, .portfolio-card, .testimonial-container, .about-image-container, .video-container');
     
     function checkReveal() {
         const windowHeight = window.innerHeight;
@@ -98,6 +98,26 @@ document.addEventListener('DOMContentLoaded', function() {
         element.style.transform = 'translateY(20px)';
         element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     });
+    
+    // Video placeholder interaction
+    const videoPlaceholder = document.querySelector('.video-placeholder');
+    if (videoPlaceholder) {
+        videoPlaceholder.addEventListener('click', function() {
+            // In a real implementation, this would play the video
+            // For demo purposes, we'll just show an animation
+            this.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i><span>Loading video...</span>';
+            
+            setTimeout(() => {
+                const videoContainer = this.closest('.video-container');
+                videoContainer.innerHTML = `
+                    <div class="video-message">
+                        <i class="fas fa-video"></i>
+                        <p>Video would play here in production</p>
+                    </div>
+                `;
+            }, 1500);
+        });
+    }
     
     // Check on load
     checkReveal();
