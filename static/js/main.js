@@ -147,7 +147,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Get form data
             const name = this.querySelector('#name').value;
             const email = this.querySelector('#email').value;
-            const countryCode = this.querySelector('#countryCode').value || '';
+            let countryCode = this.querySelector('#countryCode').value || '';
+            // Make sure country code starts with +
+            if (countryCode && !countryCode.startsWith('+')) {
+                countryCode = '+' + countryCode;
+            }
             const phone = this.querySelector('#phone').value || '';
             const phoneNumber = phone ? (countryCode + ' ' + phone) : '';
             const message = this.querySelector('#message').value;
