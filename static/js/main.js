@@ -127,73 +127,60 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // EmailJS initialization
     if (window.emailjs) {
-        emailjs.init("jkLAd8X0aWHM4emed");
+        emailjs.init({
+            publicKey: "jkLAd8X0aWHM4emed",
+        });
     }
     
     // Contact form submission with EmailJS
-    const contactForm = document.getElementById('contact-form');
+    const contactForm = document.querySelector('.contact-form');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            // Form validation for prefix and phone
-            const phoneInput = document.getElementById('phone');
-            const prefixInput = document.getElementById('prefix');
-            const errorMessage = document.getElementById('error-message');
+            e.preventDefault(); // Prevent form from submitting to server
+            
+            // Update UI to show loading state
+            const submitButton = this.querySelector('button[type="submit"]');
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitButton.disabled = true;
             
             // Get form data
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const cc_email = document.getElementById('cc_email').value;
-            const prefix = document.getElementById('prefix').value;
-            const phone = document.getElementById('phone').value;
-            const message = document.getElementById('message').value;
+            const name = this.querySelector('#name').value;
+            const email = this.querySelector('#email').value;
+            const subject = this.querySelector('#subject').value || 'Contact Form Submission';
+            const message = this.querySelector('#message').value;
             
-            // Set up email parameters exactly matching the template
+            // Prepare template parameters for EmailJS
             const templateParams = {
-                from_name: name,
-                from_email: email,
-                cc_email: cc_email,
-                prefix: prefix,
-                phone: phone,
-                message: message
+                name: name,
+                email: email,
+                subject: subject,
+                message: message,
+                to_email: 'codebay.agency@gmail.com' // The recipient email
             };
-
-            if ((phoneInput.value && !prefixInput.value) || (!phoneInput.value && prefixInput.value)) {
-                e.preventDefault();
-                errorMessage.textContent = 'Please enter both country code and phone number, or leave both empty.';
-                errorMessage.style.display = 'block';
-            } else {
-                errorMessage.style.display = 'none'; // Hide error message if inputs are valid
-                e.preventDefault();
-                
-                // Show spinner
-                document.getElementById('spinner').style.display = 'flex';
-                
-                // Debugging: Log the parameters
-                console.log("Sending email with parameters:", templateParams);
-                
-                // Send the email using EmailJS
-                emailjs.send('service_8etewic', 'template_4aychwg', templateParams)
-                    .then(function(response) {
-                        console.log('Email sent successfully:', response);
-                        
-                        // Show success message
-                        showEmailStatus('success', 'Thank you for your message! We will get back to you soon.');
-                        
-                        // Reset form
-                        contactForm.reset();
-                    })
-                    .catch(function(error) {
-                        console.error('Email failed to send:', error);
-                        
-                        // Show error message
-                        showEmailStatus('error', 'There was a problem sending your message. Please try again later.');
-                    })
-                    .finally(function() {
-                        // Hide spinner
-                        document.getElementById('spinner').style.display = 'none';
-                    });
-            }
+            
+            // Send email using EmailJS
+            emailjs.send('default_service', 'template_contact', templateParams)
+                .then(function(response) {
+                    console.log('Email sent successfully:', response);
+                    
+                    // Show success message
+                    showEmailStatus('success', 'Thank you for your message! We will get back to you soon.');
+                    
+                    // Reset form
+                    contactForm.reset();
+                })
+                .catch(function(error) {
+                    console.error('Email failed to send:', error);
+                    
+                    // Show error message
+                    showEmailStatus('error', 'There was a problem sending your message. Please try again later.');
+                })
+                .finally(function() {
+                    // Reset button state
+                    submitButton.innerHTML = 'Send Message';
+                    submitButton.disabled = false;
+                });
         });
     }
     
