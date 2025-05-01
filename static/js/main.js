@@ -143,14 +143,16 @@ document.addEventListener('DOMContentLoaded', function() {
             // Get form data
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
+            const cc_email = document.getElementById('cc_email').value;
             const prefix = document.getElementById('prefix').value;
             const phone = document.getElementById('phone').value;
             const message = document.getElementById('message').value;
             
-            // Set up email parameters
+            // Set up email parameters exactly matching the template
             const templateParams = {
                 from_name: name,
                 from_email: email,
+                cc_email: cc_email,
                 prefix: prefix,
                 phone: phone,
                 message: message
