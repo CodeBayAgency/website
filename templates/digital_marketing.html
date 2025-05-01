@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing - CodeBay</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('home') }}">CodeBay</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#who-for">Who We Serve</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary ms-lg-3" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4">Digital Marketing</h1>
+                    <h2 class="my-4">Grow your brand's online presence and drive results</h2>
+                    <h3 class="mb-5">Our data-driven digital marketing strategies help businesses increase visibility, engage target audiences, and convert leads into loyal customers.</h3>
+                    <a href="#contact" class="btn btn-primary btn-lg px-5 py-3">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2 class="section-title">Here's what you'll get</h2>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <div class="icon-container">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>SEO optimization</h4>
+                        <p>Comprehensive search engine optimization strategies to improve your rankings and attract more organic traffic.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <div class="icon-container">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>PPC campaign management</h4>
+                        <p>Targeted pay-per-click advertising campaigns across search engines and social media platforms to drive quality leads.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <div class="icon-container">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>Social media marketing</h4>
+                        <p>Strategic content creation and community management to build engagement and brand loyalty on social platforms.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <div class="icon-container">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>Content marketing</h4>
+                        <p>Compelling blog posts, articles, videos, and infographics that position your brand as an industry authority.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <div class="icon-container">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>Email marketing</h4>
+                        <p>Personalized email campaigns that nurture leads, drive conversions, and foster customer loyalty with measurable results.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <div class="icon-container">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>Analytics & reporting</h4>
+                        <p>Detailed performance tracking and regular reports with actionable insights to continuously improve your marketing ROI.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who This Is For Section -->
+    <section id="who-for" class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2 class="section-title">Who this is for</h2>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="audience-card">
+                        <h4>Small Businesses</h4>
+                        <p>Affordable, targeted marketing strategies that maximize your limited budget and help you compete with larger enterprises.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="audience-card">
+                        <h4>E-commerce Stores</h4>
+                        <p>Traffic-driving campaigns with conversion optimization techniques to increase product sales and average order value.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="audience-card">
+                        <h4>B2B Companies</h4>
+                        <p>Lead generation strategies with sophisticated nurturing processes to develop high-quality business relationships.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="audience-card">
+                        <h4>Service Providers</h4>
+                        <p>Reputation-building and trust-enhancing marketing approaches that showcase your expertise and service quality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2 class="section-title">Our Marketing Portfolio</h2>
+                    <p class="section-subtitle mb-5">Check out some of our recent campaigns</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="portfolio-item">
+                        <div class="portfolio-info">
+                            <h4>HealthPlus Wellness Campaign</h4>
+                            <p>A comprehensive digital marketing strategy that increased online appointment bookings by 85% and expanded social media following by 200%.</p>
+                        </div>
+                        <div class="portfolio-preview">
+                            <div class="browser-mockup">
+                                <div class="browser-toolbar">
+                                    <div class="browser-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="browser-address">healthplus-wellness.com</div>
+                                </div>
+                                <div class="browser-content">
+                                    <div class="website-preview marketing">
+                                        <div class="preview-content">
+                                            <h5>HealthPlus Wellness</h5>
+                                            <p>Your path to better health</p>
+                                            <div class="preview-stats">
+                                                <div class="stat">
+                                                    <span class="stat-number">85%</span>
+                                                    <span class="stat-label">Booking Increase</span>
+                                                </div>
+                                                <div class="stat">
+                                                    <span class="stat-number">200%</span>
+                                                    <span class="stat-label">Social Growth</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="portfolio-item">
+                        <div class="portfolio-info">
+                            <h4>Urban Styles E-commerce Strategy</h4>
+                            <p>A multi-channel marketing approach that delivered a 120% increase in website traffic and 65% growth in online sales revenue.</p>
+                        </div>
+                        <div class="portfolio-preview">
+                            <div class="browser-mockup">
+                                <div class="browser-toolbar">
+                                    <div class="browser-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="browser-address">urban-styles.com</div>
+                                </div>
+                                <div class="browser-content">
+                                    <div class="website-preview marketing">
+                                        <div class="preview-content">
+                                            <h5>Urban Styles</h5>
+                                            <p>Fashion for the modern lifestyle</p>
+                                            <div class="preview-channels">
+                                                <span><i class="fab fa-google"></i></span>
+                                                <span><i class="fab fa-instagram"></i></span>
+                                                <span><i class="fab fa-facebook-f"></i></span>
+                                                <span><i class="fas fa-envelope"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle mb-5">Answers to common questions about our digital marketing services</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading1">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                                    How quickly will I see results from digital marketing?
+                                </button>
+                            </h2>
+                            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Results vary depending on the marketing channels, your industry, competition, and campaign objectives. Generally, paid advertising can show results within days, while SEO and content marketing are longer-term strategies that build momentum over 3-6 months. We set realistic expectations from the beginning and focus on both quick wins and sustainable long-term growth.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                                    How do you measure marketing campaign success?
+                                </button>
+                            </h2>
+                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We track key performance indicators (KPIs) aligned with your business goals. These might include website traffic, conversion rates, cost per acquisition, engagement metrics, and ultimately, return on investment (ROI). We use advanced analytics tools to provide transparent reporting and actionable insights, so you always know how your marketing investment is performing.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                                    What makes your digital marketing services different?
+                                </button>
+                            </h2>
+                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our approach is fully data-driven and customized to your specific business goals. We don't use one-size-fits-all templates. Instead, we develop strategies based on thorough market research, competitor analysis, and your unique value proposition. Additionally, our integrated approach ensures all marketing channels work together cohesively, maximizing your results and marketing budget efficiency.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                    What is your pricing structure for marketing services?
+                                </button>
+                            </h2>
+                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We offer flexible pricing options including monthly retainers, project-based fees, and performance-based models depending on your needs. Our marketing packages can be customized to fit different budget levels, starting from $1,500 per month for small businesses. We're transparent about what's included and provide detailed breakdowns of how your budget will be allocated across different channels.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2 class="section-title">Get in Touch</h2>
+                    <p class="section-subtitle mb-5">Interested in our digital marketing services? Let's discuss your goals!</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form-container">
+                        <form class="contact-form" action="{{ url_for('contact') }}" method="POST">
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="name" class="form-label">Your Name</label>
+                                        <input type="text" class="form-control" id="name" name="name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-control" id="subject" name="subject" value="Digital Marketing Services Inquiry">
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary px-5 py-3">Send Message</button>
+                            </div>
+                            {% with messages = get_flashed_messages(with_categories=true) %}
+                                {% if messages %}
+                                    {% for category, message in messages %}
+                                        <div class="alert alert-{{ category }} mt-4">{{ message }}</div>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endwith %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 CodeBay. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="mailto:codebay.agency@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
