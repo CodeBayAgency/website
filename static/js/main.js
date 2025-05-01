@@ -147,15 +147,18 @@ document.addEventListener('DOMContentLoaded', function() {
             // Get form data
             const name = this.querySelector('#name').value;
             const email = this.querySelector('#email').value;
-            const subject = this.querySelector('#subject').value || 'Contact Form Submission';
+            const countryCode = this.querySelector('#countryCode').value || '';
+            const phone = this.querySelector('#phone').value || '';
+            const phoneNumber = phone ? (countryCode + ' ' + phone) : '';
             const message = this.querySelector('#message').value;
             
             // Prepare template parameters for EmailJS
             const templateParams = {
                 name: name,
                 email: email,
-                subject: subject,
+                phone: phoneNumber,
                 message: message,
+                subject: 'Contact Form Submission',
                 to_email: 'codebay.agency@gmail.com' // The recipient email
             };
             

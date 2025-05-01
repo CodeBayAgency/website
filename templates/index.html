@@ -422,18 +422,47 @@
                         {% endwith %}
                         <form action="{{ url_for('contact') }}" method="POST" class="contact-form">
                             <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="name" class="form-label">Your Name</label>
+                                        <input type="text" class="form-control" id="name" name="name" required>
+                                    </div>
                                 </div>
-                                <div class="col-md-6 mb-3">
-                                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="mb-3">
-                                <textarea name="message" class="form-control" rows="6" placeholder="Tell us about your project..." required></textarea>
+                            <div class="row">
+                                <div class="col-md-3 mb-4">
+                                    <div class="form-group">
+                                        <label for="countryCode" class="form-label">Country Code</label>
+                                        <select class="form-control" id="countryCode" name="countryCode">
+                                            <option value="+1">+1 (US/CA)</option>
+                                            <option value="+44">+44 (UK)</option>
+                                            <option value="+61">+61 (AU)</option>
+                                            <option value="+91">+91 (IN)</option>
+                                            <option value="+86">+86 (CN)</option>
+                                            <option value="+49">+49 (DE)</option>
+                                            <option value="+33">+33 (FR)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 mb-4">
+                                    <div class="form-group">
+                                        <label for="phone" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="message" class="form-label">Your Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                             </div>
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary btn-lg px-5">Send Message</button>
+                                <button type="submit" class="btn btn-primary px-5 py-3">Send Message</button>
                             </div>
                         </form>
                     </div>
