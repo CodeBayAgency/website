@@ -717,23 +717,16 @@ footer {
 }
 
 .portfolio-card-image {
-    height: 200px;
+    height: 250px;
     overflow: hidden;
 }
 
-.portfolio-image-placeholder {
+.portfolio-card-image img {
     width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(59, 130, 246, 0.1);
+    height: auto;
+    display: block;
 }
 
-.portfolio-image-placeholder i {
-    font-size: 3rem;
-    color: var(--highlight-color);
-}
 
 .portfolio-card-body {
     padding: 1.5rem;
