@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software Testing - CodeBay</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Testing - CodeBay</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
     <!-- Navigation -->
@@ -29,8 +29,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
+                   <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home') }}#services">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#who-for">Who We Serve</a>
@@ -49,69 +49,197 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="d-flex align-items-center" style="background-color: #f8f9fa; padding: 80px 0;">
+   <!-- Hero Section -->
+    <section id="hero" class="d-flex align-items-center">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
-                    <h1 class="display-4">Software Testing</h1>
-                    <h2 class="my-4">Ensure reliability and quality with our comprehensive testing solutions</h2>
-                    <h3 class="mb-5">Our meticulous testing services ensure your software works flawlessly, from functionality to security. We've got you covered.</h3>
+                    <h1 class="display-4 fw-bold">Software Testing</h1>
+                    <h2 class="my-4">Ensure reliability and quality with our comprehensive software testing solutions.</h2>
+                    <p class="lead mb-5">Our meticulous testing services ensure your software runs smoothly, with bug detection, performance checks, and quality assurance tailored to your business needs.</p>
                     <a href="#contact" class="btn btn-primary btn-lg px-5 py-3">Get a Free Consultation</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <section id="main-content" class="py-5 ">
+    <!-- Service Description -->
+    <section id="service-description" class="py-5">
         <div class="container">
             <div class="row text-center">
-                <div class="col-12">
-                    <h2 class="section-title">Why Choose Our Software Testing Services?</h2>
-                    <p class="section-subtitle mb-5">We are committed to the success of your digital products</p>
+                <div class="col-12 mb-5">
+                    <h2 class="section-title">Delivering Flawless Software Through Rigorous Testing</h2>
+                    <p class="section-subtitle">Our approach to software testing</p>
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-lg-8 mx-auto">
-                    <div class="service-description mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                   <div class="mb-5">
                         <p class="lead">
                             In today's digital landscape, the success of your software hinges on its reliability and performance. At CodeBay, we understand the critical role that rigorous testing plays in ensuring your software meets the highest standards. Our Software Testing service is designed to identify and resolve issues before they impact your users, allowing you to launch with confidence.
                         </p>
                         <p>
                             Our comprehensive testing approach covers everything from functionality to security, providing you with a complete assessment of your software's performance. With our expert team, you'll gain a clear understanding of how your software operates under different conditions, user scenarios, and security threats.
                         </p>
+                   </div>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-5 bg-light">
+        <div class="container">
+             <div class="row text-center">
+                <div class="col-12 mb-5">
+                    <h2 class="section-title">Benefits of Professional Software Testing</h2>
+                    <p class="section-subtitle">Why choose CodeBay for your testing needs</p>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                    <div class="benefit-card">
+                        <i class="fas fa-dollar-sign benefit-icon"></i>
+                        <h4>Reduced Development Costs</h4>
+                        <p>Fixing issues early is more cost-effective than addressing them post-launch.</p>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <h4 class="mb-3">Our Software Testing Services Include:</h4>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><strong>Functional Testing:</strong> Ensuring all features work as intended.</li>
-                                <li class="mb-2"><strong>Performance Testing:</strong> Evaluating speed, stability, and responsiveness under various loads.</li>
-                                <li class="mb-2"><strong>Security Testing:</strong> Identifying vulnerabilities to protect against cyber threats.</li>
-                                <li class="mb-2"><strong>Usability Testing:</strong> Assessing user-friendliness and ease of navigation.</li>
-                                <li class="mb-2"><strong>Compatibility Testing:</strong> Confirming compatibility across different browsers, devices, and operating systems.</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <h4 class="mb-3">Benefits of Professional Software Testing:</h4>
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><strong>Reduced Development Costs:</strong> Fixing issues early is more cost-effective than addressing them post-launch.</li>
-                                <li class="mb-2"><strong>Improved User Satisfaction:</strong> Reliable software leads to a better user experience and higher satisfaction.</li>
-                                <li class="mb-2"><strong>Enhanced Security:</strong> Protect your data and your users' data with robust security testing.</li>
-                                <li class="mb-2"><strong>Increased Efficiency:</strong> Ensure your software can handle peak loads and perform smoothly.</li>
-                            </ul>
-                        </div>
-                     </div>
-                    <div class="col-12">
-                        <p>
-                           We believe in delivering not just software, but solutions that work flawlessly from the start. With CodeBay, you're partnering with a team that's committed to the success of your digital products.
-                        </p> 
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="benefit-card">
+                         <i class="fas fa-thumbs-up benefit-icon"></i>
+                        <h4>Improved User Satisfaction</h4>
+                        <p>Reliable software leads to a better user experience and higher satisfaction.</p>
+                    </div>
+                </div>
+                 <div class="col-md-4 mb-4">
+                    <div class="benefit-card">
+                         <i class="fas fa-shield-alt benefit-icon"></i>
+                        <h4>Enhanced Security</h4>
+                        <p>Protect your data and your users' data with robust security testing.</p>
+                    </div>
+                </div>
+                 <div class="col-md-4 mb-4">
+                    <div class="benefit-card">
+                         <i class="fas fa-chart-line benefit-icon"></i>
+                        <h4>Increased Efficiency</h4>
+                        <p>Ensure your software can handle peak loads and perform smoothly.</p>
+                    </div>
+                </div>
+                 <div class="col-md-4 mb-4">
+                    <div class="benefit-card">
+                         <i class="fas fa-check benefit-icon"></i>
+                        <h4>Higher Software Quality</h4>
+                        <p>Ensure your software meets all business requirements.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="benefit-card">
+                         <i class="fas fa-clock benefit-icon"></i>
+                        <h4>Time to Market</h4>
+                        <p>Ensuring quality leads to faster deployment of your software.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Who We Serve Section -->
+    <section id="who-for" class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2 class="section-title">Who We Serve</h2>
+                    <p class="section-subtitle mb-5">Our services are tailored to meet the needs of</p>
+                </div>
+            </div>
+             <div class="row mt-5">
+               <div class="col-lg-8 mx-auto">
+                   <p class="lead">
+                        Our Software Testing services are essential for startups, established businesses, and tech-forward companies seeking to ensure their software products are of the highest quality. We work with:
+                    </p>
+                     <ul class="list-unstyled">
+                        <li class="mb-2"><strong>Startups:</strong> Launching a new product? We make sure it's bug-free and ready for the market.</li>
+                        <li class="mb-2"><strong>Established Businesses:</strong> Enhance your current software offerings with our rigorous testing processes.</li>
+                        <li class="mb-2"><strong>Tech Companies:</strong> Stay ahead with cutting-edge testing that keeps you innovative and competitive.</li>
+                        <li class="mb-2"><strong>E-commerce Platforms:</strong> Ensure flawless user journeys and transactions.</li>
+                         <li class="mb-2"><strong>Mobile App Developers:</strong> Guarantee seamless functionality and compatibility across devices.</li>
+                    </ul>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2 class="section-title">Our Software Testing Portfolio</h2>
+                    <p class="section-subtitle mb-5">Examples of our work and success stories</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>Our portfolio is under development. Please check again later.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle mb-5">Everything you need to know about our Software Testing services</p>
+                </div>
+            </div>
+             <div class="row mt-5">
+                 <div class="col-lg-8 mx-auto">
+                     <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                   Why is software testing important?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Software testing is critical to ensure the quality, reliability, and security of your software. It identifies bugs, performance issues, and vulnerabilities before they affect your users or business.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    What types of testing do you perform?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We offer a comprehensive suite of testing services, including functional, performance, security, usability, and compatibility testing. We tailor our approach to meet the specific needs of your software.
+                                </div>
+                            </div>
+                        </div>
+                         <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                   How do you ensure the security of our software during testing?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Security is paramount in our testing process. We employ robust methods to identify vulnerabilities and ensure that your software is secure against potential threats.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="py-5">
         <div class="container">
@@ -122,10 +250,10 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-8">
+               <div class="col-lg-8">
                     <div class="contact-form-container">
                         <form class="contact-form" action="{{ url_for('contact') }}" method="POST">
-                            <!-- ... rest of the form is the same ... -->
+
                             <div class="row">
                                 <div class="col-md-6 mb-4">
                                     <div class="form-group">
@@ -141,7 +269,7 @@
                                 </div>
                             </div>
                             <div class="phone-fields-container">
-                                <div class="country-code-container">
+                               <div class="country-code-container">
                                     <label for="countryCode" class="form-label">Country Code</label>
                                     <input type="text" class="form-control" id="countryCode" name="countryCode" placeholder="+1" maxlength="4">
                                 </div>
@@ -198,5 +326,5 @@
     
     <!-- Custom JS -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-</body>
+  </body>
 </html>
