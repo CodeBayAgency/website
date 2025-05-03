@@ -25,45 +25,45 @@ def website_building():
     """Website building service page"""
     return render_template('index.html')
 
-# Mobile App Development Service
+# Software Testing Service
 
 
 @app.route('/services/software-testing')
-def mobile_app_development():
-    """Mobile app development service page"""
-    return render_template('mobile_app_development.html')
+def software_testing():
+    """Software testing service page"""
+    return render_template('software_testing.html')
 
-# E-commerce Solutions Service
-
-
-@app.route('/services/ecommerce-solutions')
-def ecommerce_solutions():
-    """E-commerce solutions service page"""
-    return render_template('ecommerce_solutions.html')
-
-# Digital Marketing Service
+# AWS Architecture & Consulting Service
 
 
-@app.route('/services/digital-marketing')
-def digital_marketing():
-    """Digital marketing service page"""
-    return render_template('digital_marketing.html')
+@app.route('/services/aws-architecture-consulting')
+def aws_architecture_consulting():
+    """AWS architecture & consulting service page"""
+    return render_template('aws_architecture_consulting.html')
 
-# Custom Software Development Service
-
-
-@app.route('/services/custom-software')
-def custom_software():
-    """Custom software development service page"""
-    return render_template('custom_software.html')
-
-# IT Consulting Service
+# AI Solutions Service
 
 
-@app.route('/services/it-consulting')
-def it_consulting():
-    """IT consulting service page"""
-    return render_template('it_consulting.html')
+@app.route('/services/ai-solutions')
+def ai_solutions():
+    """AI solutions service page"""
+    return render_template('ai_solutions.html')
+
+# Cloud Migration to AWS Service
+
+
+@app.route('/services/cloud-migration-to-aws')
+def cloud_migration_to_aws():
+    """Cloud migration to AWS service page"""
+    return render_template('cloud_migration_to_aws.html')
+
+# Custom Restaurant Apps Service
+
+
+@app.route('/services/custom-restaurant-apps')
+def custom_restaurant_apps():
+    """Custom restaurant apps service page"""
+    return render_template('custom_restaurant_apps.html')
 
 # Coming Soon Page
 
@@ -98,16 +98,16 @@ def contact():
 
         if 'website-building' in referrer:
             return redirect(url_for('website_building', _anchor='contact'))
-        elif 'software-testing' in referrer:
+        elif '/services/software-testing' in referrer:
             return redirect(url_for('software_testing', _anchor='contact'))
-        elif 'ecommerce-solutions' in referrer:
-            return redirect(url_for('ecommerce_solutions', _anchor='contact'))
-        elif 'digital-marketing' in referrer:
-            return redirect(url_for('digital_marketing', _anchor='contact'))
-        elif 'custom-software' in referrer:
-            return redirect(url_for('custom_software', _anchor='contact'))
-        elif 'it-consulting' in referrer:
-            return redirect(url_for('it_consulting', _anchor='contact'))
+        elif '/services/aws-architecture-consulting' in referrer:
+            return redirect(url_for('aws_architecture_consulting', _anchor='contact'))
+        elif '/services/ai-solutions' in referrer:
+            return redirect(url_for('ai_solutions', _anchor='contact'))
+        elif '/services/cloud-migration-to-aws' in referrer:
+            return redirect(url_for('cloud_migration_to_aws', _anchor='contact'))
+        elif '/services/custom-restaurant-apps' in referrer:
+            return redirect(url_for('custom_restaurant_apps', _anchor='contact'))
         else:
             return redirect(url_for('home', _anchor='contact'))
     except Exception as e:
@@ -119,16 +119,16 @@ def contact():
 
         if 'website-building' in referrer:
             return redirect(url_for('website_building', _anchor='contact'))
-        elif 'software-testing' in referrer:
+        elif '/services/software-testing' in referrer:
             return redirect(url_for('software_testing', _anchor='contact'))
-        elif 'ecommerce-solutions' in referrer:
-            return redirect(url_for('ecommerce_solutions', _anchor='contact'))
-        elif 'digital-marketing' in referrer:
-            return redirect(url_for('digital_marketing', _anchor='contact'))
-        elif 'custom-software' in referrer:
-            return redirect(url_for('custom_software', _anchor='contact'))
-        elif 'it-consulting' in referrer:
-            return redirect(url_for('it_consulting', _anchor='contact'))
+        elif '/services/aws-architecture-consulting' in referrer:
+            return redirect(url_for('aws_architecture_consulting', _anchor='contact'))
+        elif '/services/ai-solutions' in referrer:
+            return redirect(url_for('ai_solutions', _anchor='contact'))
+        elif '/services/cloud-migration-to-aws' in referrer:
+            return redirect(url_for('cloud_migration_to_aws', _anchor='contact'))
+        elif '/services/custom-restaurant-apps' in referrer:
+            return redirect(url_for('custom_restaurant_apps', _anchor='contact'))
         else:
             return redirect(url_for('home', _anchor='contact'))
 

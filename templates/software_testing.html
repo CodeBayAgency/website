@@ -23,7 +23,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="{{ url_for('home') }}">CodeBay</a>
+            <a class="navbar-brand" href="{{ url_for('index') }}">CodeBay</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -50,281 +50,74 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="d-flex align-items-center">
+    <section id="hero" class="d-flex align-items-center" style="background-color: #f8f9fa; padding: 80px 0;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
-                    <h1 class="display-4">Mobile App Development</h1>
-                    <h2 class="my-4">Turn your ideas into stunning mobile experiences</h2>
-                    <h3 class="mb-5">We create beautiful, intuitive, and high-performing mobile applications that help businesses connect with their customers and drive growth across platforms.</h3>
-                    <a href="#contact" class="btn btn-primary btn-lg px-5 py-3">Contact Us</a>
+                    <h1 class="display-4">Software Testing</h1>
+                    <h2 class="my-4">Ensure reliability and quality with our comprehensive testing solutions</h2>
+                    <h3 class="mb-5">Our meticulous testing services ensure your software works flawlessly, from functionality to security. We've got you covered.</h3>
+                    <a href="#contact" class="btn btn-primary btn-lg px-5 py-3">Get a Free Consultation</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section id="services" class="py-5">
+        <!-- Main Content -->
+    <section id="main-content" class="py-5">
         <div class="container">
-            <div class="row text-center">
-                <div class="col-12">
-                    <h2 class="section-title">Here's what you'll get</h2>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-md-4 mb-4">
-                    <div class="service-card">
-                        <div class="icon-container">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h4>Cross-platform development</h4>
-                        <p>Apps that work seamlessly on iOS, Android, and other platforms, reducing development time and cost.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="service-card">
-                        <div class="icon-container">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h4>User-centered design</h4>
-                        <p>Intuitive and engaging interfaces that prioritize user experience and drive higher engagement rates.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="service-card">
-                        <div class="icon-container">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h4>Backend integration</h4>
-                        <p>Seamless connection with your existing systems, APIs, and third-party services for a unified experience.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="service-card">
-                        <div class="icon-container">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h4>Advanced features</h4>
-                        <p>Integration of push notifications, in-app purchases, real-time data, and other capabilities to enhance functionality.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="service-card">
-                        <div class="icon-container">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h4>Quality assurance</h4>
-                        <p>Rigorous testing across devices and scenarios to ensure your app works flawlessly for all users.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="service-card">
-                        <div class="icon-container">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h4>Post-launch support</h4>
-                        <p>Ongoing maintenance, updates, and performance optimization to keep your app running at its best.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Who This Is For Section -->
-    <section id="who-for" class="py-5">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-12">
-                    <h2 class="section-title">Who this is for</h2>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="audience-card">
-                        <h4>Startups</h4>
-                        <p>Turn your innovative idea into a market-ready mobile app with MVP development focused on core features and quick market entry.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="audience-card">
-                        <h4>Established Businesses</h4>
-                        <p>Extend your digital presence with mobile solutions that integrate with your existing systems and enhance customer engagement.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="audience-card">
-                        <h4>E-commerce Companies</h4>
-                        <p>Create seamless shopping experiences with mobile apps featuring product catalogs, secure payments, and personalized recommendations.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="audience-card">
-                        <h4>Service Providers</h4>
-                        <p>Streamline appointment booking, service delivery, and customer communication with a dedicated mobile application for your services.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-5">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-12">
-                    <h2 class="section-title">Our Mobile App Portfolio</h2>
-                    <p class="section-subtitle mb-5">Check out some of our recent projects</p>
-                </div>
-            </div>
             <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="portfolio-item">
-                        <div class="portfolio-info">
-                            <h4>FitTrack Health App</h4>
-                            <p>A comprehensive fitness tracking application with workout plans, nutrition logging, and progress analytics.</p>
-                        </div>
-                        <div class="portfolio-preview">
-                            <div class="browser-mockup">
-                                <div class="browser-toolbar">
-                                    <div class="browser-dots">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                    <div class="browser-address">fittrack-health.app</div>
-                                </div>
-                                <div class="browser-content">
-                                    <div class="website-preview mobile-app">
-                                        <div class="preview-content">
-                                            <h5>FitTrack</h5>
-                                            <p>Your personal health companion</p>
-                                            <div class="preview-app-icons">
-                                                <span><i class="fas fa-heartbeat"></i></span>
-                                                <span><i class="fas fa-running"></i></span>
-                                                <span><i class="fas fa-utensils"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-md-12">
+                    <h2 class="text-center mb-5">Why Choose Our Software Testing Services?</h2>
+                    <p class="lead">
+                        In today's digital landscape, the success of your software hinges on its reliability and performance. At CodeBay, we understand the critical role that rigorous testing plays in ensuring your software meets the highest standards. Our Software Testing service is designed to identify and resolve issues before they impact your users, allowing you to launch with confidence.
+                    </p>
+                    <p>
+                        Our comprehensive testing approach covers everything from functionality to security, providing you with a complete assessment of your software's performance. With our expert team, you'll gain a clear understanding of how your software operates under different conditions, user scenarios, and security threats.
+                    </p>
+                    <div class="mt-4">
+                        <h3>Our Software Testing Services Include:</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Functional Testing:</strong> Ensuring all features work as intended.</li>
+                            <li class="list-group-item"><strong>Performance Testing:</strong> Evaluating speed, stability, and responsiveness under various loads.</li>
+                            <li class="list-group-item"><strong>Security Testing:</strong> Identifying vulnerabilities to protect against cyber threats.</li>
+                            <li class="list-group-item"><strong>Usability Testing:</strong> Assessing user-friendliness and ease of navigation.</li>
+                            <li class="list-group-item"><strong>Compatibility Testing:</strong> Confirming compatibility across different browsers, devices, and operating systems.</li>
+                        </ul>
                     </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="portfolio-item">
-                        <div class="portfolio-info">
-                            <h4>QuickServe Food Delivery</h4>
-                            <p>A food delivery application with restaurant listings, real-time order tracking, and secure payment processing.</p>
-                        </div>
-                        <div class="portfolio-preview">
-                            <div class="browser-mockup">
-                                <div class="browser-toolbar">
-                                    <div class="browser-dots">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                    <div class="browser-address">quickserve-delivery.app</div>
-                                </div>
-                                <div class="browser-content">
-                                    <div class="website-preview mobile-app">
-                                        <div class="preview-content">
-                                            <h5>QuickServe</h5>
-                                            <p>Delicious food delivered fast</p>
-                                            <div class="preview-app-screens">
-                                                <div class="app-screen"></div>
-                                                <div class="app-screen"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="mt-4">
+                        <h3>Benefits of Professional Software Testing:</h3>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Reduced Development Costs:</strong> Fixing issues early is more cost-effective than addressing them post-launch.</li>
+                            <li class="list-group-item"><strong>Improved User Satisfaction:</strong> Reliable software leads to a better user experience and higher satisfaction.</li>
+                            <li class="list-group-item"><strong>Enhanced Security:</strong> Protect your data and your users' data with robust security testing.</li>
+                            <li class="list-group-item"><strong>Increased Efficiency:</strong> Ensure your software can handle peak loads and perform smoothly.</li>
+                        </ul>
+                    </div>
+                    <div class="mt-4">
+                        <p>
+                           We believe in delivering not just software, but solutions that work flawlessly from the start. With CodeBay, you're partnering with a team that's committed to the success of your digital products.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="py-5">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-12">
-                    <h2 class="section-title">Frequently Asked Questions</h2>
-                    <p class="section-subtitle mb-5">Answers to common questions about our mobile app development services</p>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="accordion" id="faqAccordion">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="heading1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                    How long does it take to develop a mobile app?
-                                </button>
-                            </h2>
-                            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    The development timeline varies depending on the complexity of your app. A simple app can take 2-3 months, while more complex applications might require 4-6 months or more. During our initial consultation, we'll provide a more accurate timeline based on your specific requirements.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="heading2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                    Should I build a native app or a cross-platform app?
-                                </button>
-                            </h2>
-                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    This depends on your specific needs. Native apps offer the best performance and access to platform-specific features but require separate development for iOS and Android. Cross-platform apps are more cost-effective and faster to develop with a single codebase. We'll help you decide which approach is best for your project based on your requirements, budget, and timeline.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="heading3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                    What happens after my app is launched?
-                                </button>
-                            </h2>
-                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    We provide ongoing support and maintenance to ensure your app continues to function smoothly. This includes regular updates, bug fixes, performance optimization, and adapting to new OS versions and device types. We also offer analytics integration to help you understand user behavior and make data-driven improvements to your app.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="heading4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    How much does it cost to develop a mobile app?
-                                </button>
-                            </h2>
-                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    The cost varies widely depending on complexity, features, platforms, and design requirements. Simple apps might start at $10,000, while more complex applications can range from $50,000 to $200,000+. We provide transparent pricing and detailed quotes after understanding your specific project requirements.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
+     <!-- Contact Section -->
     <section id="contact" class="py-5">
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
-                    <h2 class="section-title">Get in Touch</h2>
-                    <p class="section-subtitle mb-5">Interested in our mobile app development services? Let's discuss your project!</p>
+                    <h2 class="section-title">Let's Get Started</h2>
+                    <p class="section-subtitle mb-5">Interested in our Software Testing services? Let's discuss your project!</p>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="contact-form-container">
                         <form class="contact-form" action="{{ url_for('contact') }}" method="POST">
+                            <!-- ... rest of the form is the same ... -->
                             <div class="row">
                                 <div class="col-md-6 mb-4">
                                     <div class="form-group">

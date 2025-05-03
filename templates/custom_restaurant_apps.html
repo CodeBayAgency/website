@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Consulting - CodeBay</title>
+    <title>Custom Restaurant Apps - CodeBay</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -30,10 +30,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
+                        <a class="nav-link" href="{{ url_for('home') }}#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#who-for">Who We Serve</a>
+                        <a class="nav-link" href="{{ url_for('home') }}#about">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#portfolio">Portfolio</a>
@@ -54,10 +54,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
-                    <h1 class="display-4">IT Consulting</h1>
-                    <h2 class="my-4">Strategic technology guidance for business growth</h2>
-                    <h3 class="mb-5">Our expert consultants help you navigate complex technology decisions, implement best practices, and develop IT strategies that align with your business objectives.</h3>
-                    <a href="#contact" class="btn btn-primary btn-lg px-5 py-3">Contact Us</a>
+                    <h1 class="display-4">Custom Restaurant Apps</h1>
+                    <h2 class="my-4">Revolutionize Your Restaurant with a Custom Mobile App</h2>
+                    <h3 class="mb-5">Cross-platform mobile apps tailored to your restaurant’s unique needs – from online ordering and reservations to loyalty programs and real-time menu updates.</h3>
+                    <a href="#benefits" class="btn btn-primary btn-lg px-5 py-3">Learn More</a>
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
-                    <h2 class="section-title">Here's what you'll get</h2>
+                    <h2 class="section-title">Key Features & Benefits</h2>
                 </div>
             </div>
             <div class="row mt-5">
@@ -77,8 +77,8 @@
                         <div class="icon-container">
                             <i class="fas fa-check-circle"></i>
                         </div>
-                        <h4>Technology assessment</h4>
-                        <p>Comprehensive evaluation of your current IT infrastructure, systems, and processes to identify strengths, weaknesses, and opportunities.</p>
+                        <h4>Custom Menu Integration</h4>
+                        <p>Easily manage and update your menu in real-time, ensuring customers have the latest options and pricing at their fingertips.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
@@ -86,8 +86,8 @@
                         <div class="icon-container">
                             <i class="fas fa-check-circle"></i>
                         </div>
-                        <h4>Strategic IT planning</h4>
-                        <p>Customized technology roadmaps aligned with your business goals to guide investments and implementation priorities.</p>
+                        <h4>Online Ordering & Payments</h4>
+                        <p>Enable online orders with secure in-app payments, streamlining the order process for both dine-in and takeout customers.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
@@ -95,8 +95,8 @@
                         <div class="icon-container">
                             <i class="fas fa-check-circle"></i>
                         </div>
-                        <h4>Security & compliance</h4>
-                        <p>Expert guidance on cybersecurity best practices, risk management, and regulatory compliance requirements for your industry.</p>
+                        <h4>Reservations & Table Management</h4>
+                        <p>Allow customers to book tables through the app, reducing wait times and optimizing your restaurant's seating plan.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
@@ -104,8 +104,8 @@
                         <div class="icon-container">
                             <i class="fas fa-check-circle"></i>
                         </div>
-                        <h4>Cloud strategy</h4>
-                        <p>Tailored recommendations for cloud adoption, migration planning, and optimization to improve scalability and reduce costs.</p>
+                        <h4>Loyalty & Promotions</h4>
+                        <p>Reward loyal customers with exclusive deals and personalized offers, increasing repeat business and customer retention.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
@@ -113,8 +113,8 @@
                         <div class="icon-container">
                             <i class="fas fa-check-circle"></i>
                         </div>
-                        <h4>Implementation support</h4>
-                        <p>Hands-on assistance with technology selection, vendor management, and project oversight to ensure successful execution.</p>
+                        <h4>Push Notifications</h4>
+                        <p>Send out timely updates on specials, events, or order statuses directly to customers' devices, keeping them informed and engaged.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
@@ -122,45 +122,8 @@
                         <div class="icon-container">
                             <i class="fas fa-check-circle"></i>
                         </div>
-                        <h4>Process optimization</h4>
-                        <p>Identify and redesign inefficient workflows, implement automation, and establish best practices to improve operational efficiency.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Who This Is For Section -->
-    <section id="who-for" class="py-5">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-12">
-                    <h2 class="section-title">Who this is for</h2>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="audience-card">
-                        <h4>Business Leaders</h4>
-                        <p>Strategic guidance on technology investments that drive growth and create competitive advantages for your organization.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="audience-card">
-                        <h4>IT Departments</h4>
-                        <p>Specialized expertise to supplement your team's capabilities, tackle complex projects, and implement best practices.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="audience-card">
-                        <h4>Growing Companies</h4>
-                        <p>Scalable IT solutions and infrastructure planning to support your business expansion and evolving needs.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-4">
-                    <div class="audience-card">
-                        <h4>Organizations in Transition</h4>
-                        <p>Expert guidance through mergers, acquisitions, digital transformation, and other major business changes.</p>
+                        <h4>Data Analytics</h4>
+                        <p>Gain insights into customer preferences, peak hours, and popular items, helping you make data-driven decisions to optimize your business.</p>
                     </div>
                 </div>
             </div>
@@ -172,7 +135,7 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
-                    <h2 class="section-title">Our Consulting Portfolio</h2>
+                    <h2 class="section-title">Our Portfolio</h2>
                     <p class="section-subtitle mb-5">Check out some of our recent client success stories</p>
                 </div>
             </div>
@@ -181,7 +144,7 @@
                     <div class="portfolio-item">
                         <div class="portfolio-info">
                             <h4>Healthcare Provider Digital Transformation</h4>
-                            <p>A comprehensive IT modernization strategy that improved patient care delivery, reduced operational costs by 30%, and ensured HIPAA compliance.</p>
+                            <p>A cross-platform mobile app with ordering, reservations, menu management, and customer engagement features.</p>
                         </div>
                         <div class="portfolio-preview">
                             <div class="browser-mockup">
@@ -194,14 +157,14 @@
                                     <div class="browser-address">healthcare-case-study</div>
                                 </div>
                                 <div class="browser-content">
-                                    <div class="website-preview consulting">
+                                    <div class="website-preview restaurant">
                                         <div class="preview-content">
-                                            <h5>Healthcare Transformation</h5>
-                                            <p>IT Modernization Initiative</p>
+                                            <h5>Restaurant Name</h5>
+                                            <p>Mobile App</p>
                                             <div class="preview-results">
-                                                <div class="result">30% Cost Reduction</div>
-                                                <div class="result">HIPAA Compliance</div>
-                                                <div class="result">Improved Care Delivery</div>
+                                                <div class="result">Online Ordering</div>
+                                                <div class="result">Reservations</div>
+                                                <div class="result">Loyalty</div>
                                             </div>
                                         </div>
                                     </div>
@@ -214,7 +177,7 @@
                     <div class="portfolio-item">
                         <div class="portfolio-info">
                             <h4>Manufacturing Cloud Migration</h4>
-                            <p>A strategic cloud migration plan that enhanced operational flexibility, strengthened disaster recovery capabilities, and reduced IT infrastructure costs by 40%.</p>
+                            <p>A custom restaurant app that enhanced online ordering, strengthened customer loyalty, and improved customer engagement.</p>
                         </div>
                         <div class="portfolio-preview">
                             <div class="browser-mockup">
@@ -227,9 +190,9 @@
                                     <div class="browser-address">manufacturing-case-study</div>
                                 </div>
                                 <div class="browser-content">
-                                    <div class="website-preview consulting">
+                                    <div class="website-preview restaurant">
                                         <div class="preview-content">
-                                            <h5>Manufacturing Excellence</h5>
+                                            <h5>Restaurant Name</h5>
                                             <p>Cloud Transformation Project</p>
                                             <div class="preview-steps">
                                                 <div class="step">Assessment</div>
@@ -239,72 +202,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="py-5">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-12">
-                    <h2 class="section-title">Frequently Asked Questions</h2>
-                    <p class="section-subtitle mb-5">Answers to common questions about our IT consulting services</p>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="accordion" id="faqAccordion">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="heading1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                    What makes your IT consulting approach different?
-                                </button>
-                            </h2>
-                            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Our consulting approach is business-first rather than technology-first. We begin by understanding your business objectives, challenges, and growth plans before recommending any technology solutions. We believe in practical, actionable advice rather than theoretical frameworks, and our consultants have hands-on implementation experience across various industries. Additionally, we remain vendor-neutral, ensuring our recommendations are based solely on what's best for your organization.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="heading2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                    How do you typically structure consulting engagements?
-                                </button>
-                            </h2>
-                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Our consulting engagements typically follow a four-phase approach: (1) Discovery & Assessment, where we gather information and evaluate your current state; (2) Strategy Development, where we create recommendations and roadmaps; (3) Implementation Planning, where we detail specific initiatives, resources, and timelines; and (4) Execution Support, where we provide guidance during implementation. Engagements can be comprehensive or focused on specific needs, and we offer both project-based and ongoing advisory options to suit your requirements.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="heading3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                    What industries do you specialize in?
-                                </button>
-                            </h2>
-                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Our consulting team has extensive experience across multiple industries including healthcare, financial services, manufacturing, retail, professional services, and non-profit organizations. This diverse background enables us to understand industry-specific challenges, compliance requirements, and technological opportunities. We combine this industry knowledge with technical expertise to deliver solutions that address your unique business context while incorporating proven best practices from across sectors.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="heading4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    What is the typical ROI of working with your consultants?
-                                </button>
-                            </h2>
-                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    While ROI varies depending on your specific situation and objectives, our clients typically see returns in three main areas: cost reduction (through infrastructure optimization, vendor consolidation, and process improvement), risk mitigation (through improved security, compliance, and disaster recovery capabilities), and business growth (through enhanced customer experiences, faster time-to-market, and improved decision-making). We establish clear metrics at the start of each engagement and track outcomes to demonstrate tangible value.
                                 </div>
                             </div>
                         </div>
@@ -327,7 +224,7 @@
                 <div class="col-lg-8">
                     <div class="contact-form-container">
                         <form class="contact-form" action="{{ url_for('contact') }}" method="POST">
-                            <div class="row">
+                           <div class="row">
                                 <div class="col-md-6 mb-4">
                                     <div class="form-group">
                                         <label for="name" class="form-label">Your Name</label>
@@ -340,10 +237,17 @@
                                         <input type="email" class="form-control" id="email" name="email" required>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group mb-4">
-                                <label for="subject" class="form-label">Subject</label>
-                                <input type="text" class="form-control" id="subject" name="subject" value="IT Consulting Inquiry">
+
+                           </div>
+                           <div class="phone-fields-container">
+                                <div class="country-code-container">
+                                    <label for="countryCode" class="form-label">CC</label>
+                                    <input type="text" class="form-control" id="countryCode" name="countryCode" placeholder="+1" maxlength="4">
+                                </div>
+                                <div class="phone-number-container">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label for="message" class="form-label">Your Message</label>
