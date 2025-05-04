@@ -142,7 +142,7 @@
                 <div class="col-md-6 col-lg-3 mb-4">
                     <div class="audience-card">
                         <h4>Independent Restaurants</h4>
-                        <p>Enhance your service and reach with a branded app, simplifying the order process and increasing customer loyalty.</p>
+                        <p>Enhance your service and reach with a branded app, simplifying the ordering process and increasing customer loyalty.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4">
@@ -164,7 +164,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        
     </section>
 
 
@@ -316,7 +316,7 @@
                 <div class="col-lg-8">
                     <div class="contact-form-container">
                         <form class="contact-form" action="{{ url_for('contact') }}" method="POST">
-                           <div class="row">
+                            <div class="row">
                                 <div class="col-md-6 mb-4">
                                     <div class="form-group">
                                         <label for="name" class="form-label">Your Name</label>
@@ -329,9 +329,14 @@
                                         <input type="email" class="form-control" id="email" name="email" required>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="phone-fields-container">
 
-                           </div>
-                           <div class="phone-fields-container">
+                            </div>
+                            <div class="phone-fields-container">
+
+                            </div>
+                            <div class="phone-fields-container">
                                 <div class="country-code-container">
                                     <label for="countryCode" class="form-label">CC</label>
                                     <input type="text" class="form-control" id="countryCode" name="countryCode" placeholder="+1" maxlength="4">
@@ -350,11 +355,12 @@
                             </div>
                             {% with messages = get_flashed_messages(with_categories=true) %}
                                 {% if messages %}
-                                {% for category, message in messages %}
-                                <div class="alert alert-{{ category }} mt-4">{{ message }}</div>
-                                {% endfor %}
-                                {% endif%}
+                                    {% for category, message in messages %}
+                                        <div class="alert alert-{{ category }} mt-4">{{ message }}</div>
+                                    {% endfor %}
+                                {% endif %}
                             {% endwith %}
+
                         </form>
                     </div>
                 </div>
