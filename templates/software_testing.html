@@ -154,11 +154,19 @@
             </div>
              <div class="row mt-5">
                <div class="col-lg-8 mx-auto">
-                   <p class="lead">
+                  <p class="lead">
                         Our Software Testing services are essential for startups, established businesses, and tech-forward companies seeking to ensure their software products are of the highest quality. We work with:
                     </p>
-                     <ul class="list-unstyled">
-                        <li class="mb-2"><strong>Startups:</strong> Launching a new product? We make sure it's bug-free and ready for the market.</li>
+                     <div class="row mt-5">
+                       <div class="col-md-6 col-lg-3 mb-4">
+                         <div class="audience-card">
+                           <h4>Startups</h4>
+                           <p>Launching a new product? We make sure it's bug-free and ready for the market.</p>
+                         </div>
+                       </div>
+                       <div class="col-md-6 col-lg-3 mb-4">
+                         <div class="audience-card">
+                           <h4>Established Businesses</h4>
                         <li class="mb-2"><strong>Established Businesses:</strong> Enhance your current software offerings with our rigorous testing processes.</li>
                         <li class="mb-2"><strong>Tech Companies:</strong> Stay ahead with cutting-edge testing that keeps you innovative and competitive.</li>
                         <li class="mb-2"><strong>E-commerce Platforms:</strong> Ensure flawless user journeys and transactions.</li>
@@ -173,14 +181,59 @@
     <section id="portfolio" class="py-5">
         <div class="container">
             <div class="row text-center">
-                <div class="col-12">
+                <div class="col-12 mb-5">
                     <h2 class="section-title">Our Software Testing Portfolio</h2>
                     <p class="section-subtitle mb-5">Examples of our work and success stories</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 text-center">
-                    <p>Our portfolio is under development. Please check again later.</p>
+               <div class="col-md-6 mb-4">
+                    <div class="portfolio-item">
+                        <div class="portfolio-info">
+                            <h4>FinTrack Security Audit</h4>
+                            <p>Conducted a comprehensive security audit for a fintech app, identifying and fixing vulnerabilities that protected user data and ensured compliance.</p>
+                        </div>
+                        <div class="portfolio-preview">
+                            <div class="browser-mockup">
+                                <div class="browser-toolbar">
+                                    <div class="browser-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="browser-address">fintrack-app.com</div>
+                                </div>
+                                <div class="browser-content">
+                                    <div class="website-preview testing">
+                                        <div class="preview-content">
+                                            <h5>FinTrack</h5>
+                                            <p>Securing financial futures</p>
+                                            <div class="preview-services">
+                                               <div class="preview-service">Data Encryption</div>
+                                                <div class="preview-service">Secure Transactions</div>
+                                                <div class="preview-service">User Authentication</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-6 mb-4">
+                    <div class="portfolio-item">
+                        <div class="portfolio-info">
+                            <h4>GameOn - Mobile App Performance Optimization</h4>
+                            <p>Performed rigorous performance testing on a mobile gaming app, leading to a 40% reduction in load times and improved user retention.</p>
+                        </div>
+                         <div class="portfolio-preview">
+                            <div class="browser-mockup">
+                               <div class="browser-toolbar">
+                                    <div class="browser-dots"><span></span><span></span><span></span></div>
+                                    <div class="browser-address">gameon-app.com</div>
+                               </div>
+                           </div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -244,7 +297,7 @@
     <section id="contact" class="py-5">
         <div class="container">
             <div class="row text-center">
-                <div class="col-12">
+                <div class="col-12 mb-5">
                     <h2 class="section-title">Let's Get Started</h2>
                     <p class="section-subtitle mb-5">Interested in our Software Testing services? Let's discuss your project!</p>
                 </div>
@@ -254,7 +307,6 @@
                     <div class="contact-form-container">
                         <form class="contact-form" action="{{ url_for('contact') }}" method="POST">
 
-                            <div class="row">
                                 <div class="col-md-6 mb-4">
                                     <div class="form-group">
                                         <label for="name" class="form-label">Your Name</label>
@@ -267,7 +319,6 @@
                                         <input type="email" class="form-control" id="email" name="email" required>
                                     </div>
                                 </div>
-                            </div>
                             <div class="phone-fields-container">
                                <div class="country-code-container">
                                     <label for="countryCode" class="form-label">Country Code</label>
