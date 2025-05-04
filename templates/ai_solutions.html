@@ -35,9 +35,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#who-for">Who We Serve</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#portfolio">Portfolio</a>
-                    </li>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#faq">FAQ</a>
                     </li>
@@ -168,7 +168,7 @@
     </section>
     
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-5">
+    <!-- <section id="portfolio" class="py-5">
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
@@ -249,7 +249,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     
     <!-- FAQ Section -->
@@ -264,18 +264,6 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="accordion" id="faqAccordion">
-                       <div class="accordion-item">
-                            <h2 class="accordion-header" id="heading1">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                    Which e-commerce platforms do you work with?
-                                </button>
-                            </h2>
-                            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    We have expertise in all major e-commerce platforms including Shopify, WooCommerce, Magento, BigCommerce, and custom solutions. Our recommendation will depend on your specific needs, product volume, customization requirements, and long-term business goals. We'll help you choose the right platform during our discovery process.
-                                </div>
-                            </div>
-                        </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="heading2">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
@@ -323,14 +311,21 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
-                   <h2 class="section-title">Get in Touch</h2>
-                    <p class="section-subtitle mb-5">Interested in our e-commerce solutions? Let's discuss your project!</p>
-                </div>                
+                    <h2 class="section-title">Contact Us</h2>
+                    <p class="section-subtitle mb-5">Ready to transform your online presence? Get in touch today!</p>
+                </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
                     <div class="contact-form-container">
-                        <form class="contact-form" action="{{ url_for('contact') }}" method="POST">
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+                            {% if messages %}
+                                {% for category, message in messages %}
+                                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                                {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+                        <form action="{{ url_for('contact') }}" method="POST" class="contact-form">
                             <div class="row">
                                 <div class="col-md-6 mb-4">
                                     <div class="form-group">
@@ -345,9 +340,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group mb-4">
-                                <label for="subject" class="form-label">Subject</label>
-                                <input type="text" class="form-control" id="subject" name="subject" value="AI Solutions Inquiry">
+                            <div class="phone-fields-container">
+                                <div class="country-code-container">
+                                    <label for="countryCode" class="form-label">CC</label>
+                                    <input type="text" class="form-control" id="countryCode" name="countryCode" placeholder="+1" maxlength="4">
+                                </div>
+                                <div class="phone-number-container">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label for="message" class="form-label">Your Message</label>
@@ -356,13 +357,6 @@
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary px-5 py-3">Send Message</button>
                             </div>
-                            {% with messages = get_flashed_messages(with_categories=true) %}
-                                {% if messages %}
-                                    {% for category, message in messages %}
-                                        <div class="alert alert-{{ category }} mt-4">{{ message }}</div>
-                                    {% endfor %}
-                                {% endif %}
-                            {% endwith %}
                         </form>
                     </div>
                 </div>

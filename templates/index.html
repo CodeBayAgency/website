@@ -167,151 +167,73 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-5">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-12">
-                    <h2 class="section-title">Our Portfolio</h2>
-                    <p class="section-subtitle mb-5">Check out some of our recent projects</p>
+        <!-- Portfolio Highlight Section -->
+        <section id="portfolio" class="py-5">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h2 class="section-title">Our Portfolio</h2>
+                        <p class="section-subtitle mb-5">Some of our best work across different industries</p>
+                    </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-6 mb-6">
+                        <div class="portfolio-card">
+                            <div class="portfolio-card-image">
+                                <img src="{{ url_for('static', filename='images/Restaurant-app.png') }}" alt="Restaurant App">
+                            </div>
+                            <div class="portfolio-card-body">
+                                <h4>Cross-Platform Restaurant Application</h4>
+                                <p>A custom restaurant app with ordering, reservations, menu management, and customer engagement features – built for iOS and Android.</p>
+                                <div class="portfolio-card-tags">
+                                    <span>Custom Restaurant App</span>
+                                    <span>Mobile App</span>
+                                    <span>UX Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-6">
+                        <div class="portfolio-card">
+                            <div class="portfolio-card-image">
+                                <img src="{{ url_for('static', filename='images/Pet-Tastic-Shop.png') }}" alt="PetTastic Shop">
+                            </div>
+                            <div class="portfolio-card-body">
+                                <h4>eCommerce Shop Web Application</h4>
+                                <p>A full-featured online store with inventory management and secure payment processing.</p>
+                                <div class="portfolio-card-tags">
+                                    <span>Web App</span>
+                                    <span>UX Design</span>
+                                    <span>eCommerce</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-4 mb-4">
+                        <div class="portfolio-card">
+                            <div class="portfolio-card-image">
+                                <div class="portfolio-image-placeholder">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                            <div class="portfolio-card-body">
+                                <h4>Analytics Dashboard</h4>
+                                <p>A comprehensive business intelligence tool with real-time data visualization.</p>
+                                <div class="portfolio-card-tags">
+                                    <span>Data Visualization</span>
+                                    <span>Custom Software</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- <div class="row mt-4">
+                    <div class="col-12 text-center">
+                        <a href="#" class="btn btn-outline-primary px-4 py-2">View All Projects</a>
+                    </div>
+                </div> -->
             </div>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="portfolio-item">
-                        <div class="portfolio-info">
-                            <h4>LuxHome Interior Design</h4>
-                            <p>A premium website for an interior design studio featuring portfolio galleries, client testimonials, and service descriptions.</p>
-                        </div>
-                        <div class="portfolio-preview">
-                            <div class="browser-mockup">
-                                <div class="browser-toolbar">
-                                    <div class="browser-dots">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                    <div class="browser-address">luxhome-interior.com</div>
-                                </div>
-                                <div class="browser-content">
-                                    <div class="website-preview">
-                                        <div class="preview-content">
-                                            <h5>LuxHome Interior</h5>
-                                            <p>Transform your space into a masterpiece</p>
-                                            <div class="preview-buttons">
-                                                <a href="#" class="preview-btn">View Gallery</a>
-                                                <a href="#" class="preview-btn">Our Services</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="portfolio-item">
-                        <div class="portfolio-info">
-                            <h4>FitLife Nutrition Store</h4>
-                            <p>An e-commerce website for health supplements with product categorization, search functionality, and secure checkout.</p>
-                        </div>
-                        <div class="portfolio-preview">
-                            <div class="browser-mockup">
-                                <div class="browser-toolbar">
-                                    <div class="browser-dots">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                    <div class="browser-address">fitlife-nutrition.com</div>
-                                </div>
-                                <div class="browser-content">
-                                    <div class="website-preview ecommerce">
-                                        <div class="preview-content">
-                                            <h5>FitLife Nutrition</h5>
-                                            <p>Premium supplements for optimal health</p>
-                                            <div class="preview-categories">
-                                                <span>Proteins</span>
-                                                <span>Vitamins</span>
-                                                <span>Workout</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="portfolio-item">
-                        <div class="portfolio-info">
-                            <h4>Creative Vision Photography</h4>
-                            <p>A photographer's portfolio website with image galleries, booking system, and client area for image delivery.</p>
-                        </div>
-                        <div class="portfolio-preview">
-                            <div class="browser-mockup">
-                                <div class="browser-toolbar">
-                                    <div class="browser-dots">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                    <div class="browser-address">creative-vision-photo.com</div>
-                                </div>
-                                <div class="browser-content">
-                                    <div class="website-preview photography">
-                                        <div class="preview-content">
-                                            <h5>Creative Vision</h5>
-                                            <p>Capturing moments, creating memories</p>
-                                            <div class="preview-gallery">
-                                                <div class="preview-thumbnail"></div>
-                                                <div class="preview-thumbnail"></div>
-                                                <div class="preview-thumbnail"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="portfolio-item">
-                        <div class="portfolio-info">
-                            <h4>TechSolutions Consulting</h4>
-                            <p>A corporate website for an IT consulting firm featuring service descriptions, case studies, and team profiles.</p>
-                        </div>
-                        <div class="portfolio-preview">
-                            <div class="browser-mockup">
-                                <div class="browser-toolbar">
-                                    <div class="browser-dots">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                    <div class="browser-address">techsolutions-consulting.com</div>
-                                </div>
-                                <div class="browser-content">
-                                    <div class="website-preview corporate">
-                                        <div class="preview-content">
-                                            <h5>TechSolutions</h5>
-                                            <p>Enterprise IT solutions for modern business</p>
-                                            <div class="preview-services">
-                                                <div class="preview-service">Cloud Migration</div>
-                                                <div class="preview-service">Cybersecurity</div>
-                                                <div class="preview-service">DevOps</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+        </section>
     <!-- FAQ Section -->
     <section id="faq" class="py-5">
         <div class="container">
@@ -437,7 +359,7 @@
                             </div>
                             <div class="phone-fields-container">
                                 <div class="country-code-container">
-                                    <label for="countryCode" class="form-label">Country Code</label>
+                                    <label for="countryCode" class="form-label">CC</label>
                                     <input type="text" class="form-control" id="countryCode" name="countryCode" placeholder="+1" maxlength="4">
                                 </div>
                                 <div class="phone-number-container">

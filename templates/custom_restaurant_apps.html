@@ -130,32 +130,37 @@
         </div>
     </section>
 
-     <!-- Who We Help Section -->
+    <!-- Who This Is For Section -->
     <section id="who-for" class="py-5">
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
-                    <h2 class="section-title">Who We Help</h2>
-                    <p class="section-subtitle mb-5">Our custom restaurant apps are designed for a variety of culinary businesses</p>
+                    <h2 class="section-title">Who this is for</h2>
                 </div>
             </div>
             <div class="row mt-5">
                 <div class="col-md-6 col-lg-3 mb-4">
                     <div class="audience-card">
-                        <h4>Fine Dining</h4>
-                        <p>Elevate your brand with a sophisticated app that reflects your exquisite cuisine and ambiance.</p>
+                        <h4>Ecommerce Founders</h4>
+                        <p>Powerful online stores with optimized product displays, seamless checkout processes, and integrated payment gateways to maximize your sales potential.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4">
                     <div class="audience-card">
-                        <h4>Casual Dining</h4>
-                        <p>Simplify your operations and enhance customer convenience with an app tailored to your laid-back atmosphere.</p>
+                        <h4>Agencies & Service Providers</h4>
+                        <p>Professional websites that showcase your expertise, portfolio, and services with clear call-to-actions and client testimonials to build trust.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4">
                     <div class="audience-card">
-                        <h4>Quick Service</h4>
-                        <p>Boost efficiency and customer satisfaction with a fast and intuitive app built for speed and convenience.</p>
+                        <h4>Creative Entrepreneurs</h4>
+                        <p>Visually striking platforms that highlight your creative work, engage your audience, and convert visitors into clients or customers.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="audience-card">
+                        <h4>Personal Brands & Influencers</h4>
+                        <p>Engaging websites that amplify your personal brand, connect with your followers, and create opportunities for partnerships and monetization.</p>
                     </div>
                 </div>
             </div>
@@ -164,117 +169,73 @@
 
 
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-5">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-12">
-                    <h2 class="section-title">Our Portfolio</h2>
-                    <p class="section-subtitle mb-5">Check out some of our recent client success stories</p>
+        <!-- Portfolio Highlight Section -->
+        <section id="portfolio" class="py-5">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-12">
+                        <h2 class="section-title">Our Projects</h2>
+                        <p class="section-subtitle mb-5">Some of our best work across different industries</p>
+                    </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-8 mb-6 mx-auto">
+                        <div class="portfolio-card">
+                            <div class="portfolio-card-image">
+                                <img src="{{ url_for('static', filename='images/Restaurant-app.png') }}" alt="Restaurant App">
+                            </div>
+                            <div class="portfolio-card-body">
+                                <h4>Cross-Platform Restaurant Application</h4>
+                                <p>A custom restaurant app with ordering, reservations, menu management, and customer engagement features – built for iOS and Android.</p>
+                                <div class="portfolio-card-tags">
+                                    <span>Custom Restaurant App</span>
+                                    <span>Mobile App</span>
+                                    <span>UX Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-6 mb-6">
+                        <div class="portfolio-card">
+                            <div class="portfolio-card-image">
+                                <img src="{{ url_for('static', filename='images/Pet-Tastic-Shop.png') }}" alt="PetTastic Shop">
+                            </div>
+                            <div class="portfolio-card-body">
+                                <h4>eCommerce Shop Web Application</h4>
+                                <p>A full-featured online store with inventory management and secure payment processing.</p>
+                                <div class="portfolio-card-tags">
+                                    <span>Web App</span>
+                                    <span>UX Design</span>
+                                    <span>eCommerce</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="col-md-4 mb-4">
+                        <div class="portfolio-card">
+                            <div class="portfolio-card-image">
+                                <div class="portfolio-image-placeholder">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                            <div class="portfolio-card-body">
+                                <h4>Analytics Dashboard</h4>
+                                <p>A comprehensive business intelligence tool with real-time data visualization.</p>
+                                <div class="portfolio-card-tags">
+                                    <span>Data Visualization</span>
+                                    <span>Custom Software</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- <div class="row mt-4">
+                    <div class="col-12 text-center">
+                        <a href="#" class="btn btn-outline-primary px-4 py-2">View All Projects</a>
+                    </div>
+                </div> -->
             </div>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="portfolio-item">
-                        <div class="portfolio-info">
-                            <h4>Italian Bistro</h4>
-                            <p>A cross-platform mobile app with ordering, reservations, menu management, and customer engagement features.</p>
-                        </div>
-                        <div class="portfolio-preview">
-                            <div class="browser-mockup">
-                                <div class="browser-toolbar">
-                                    <div class="browser-dots">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                    <div class="browser-address">healthcare-case-study</div>
-                                </div>
-                                <div class="browser-content">                                  
-                                    <div class="website-preview restaurant">
-                                       <div class="preview-content">
-                                            <h5>Restaurant Name</h5>
-                                            <p>Mobile App</p>
-                                            <div class="preview-results">
-                                                <div class="result">Online Ordering</div>
-                                                <div class="result">Reservations</div>
-                                                <div class="result">Loyalty</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="portfolio-item">
-                        <div class="portfolio-info">
-                            <h4>Burger Joint</h4>
-                            <p>A custom restaurant app that enhanced online ordering, strengthened customer loyalty, and improved customer engagement.</p>
-                        </div>
-                        <div class="portfolio-preview">
-                            <div class="browser-mockup">
-                                <div class="browser-toolbar">
-                                    <div class="browser-dots">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                    <div class="browser-address">manufacturing-case-study</div>
-                                </div>
-                                <div class="browser-content">                                   
-                                    <div class="website-preview restaurant">
-                                       <div class="preview-content">
-                                            <h5>Restaurant Name</h5>
-                                            <p>Cloud Transformation Project</p>
-                                            <div class="preview-results">
-                                                <div class="result">Online Ordering</div>
-                                                <div class="result">Loyalty</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <div class="portfolio-item">
-                        <div class="portfolio-info">
-                            <h4>Sushi Bar</h4>
-                            <p>An innovative custom app that enabled online booking, order ahead, and streamlined dine-in services for a top-rated sushi restaurant.</p>
-                        </div>
-                        <div class="portfolio-preview">
-                            <div class="browser-mockup">
-                                <div class="browser-toolbar">
-                                    <div class="browser-dots">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                    <div class="browser-address">techsolutions-consulting.com</div>
-                                </div>
-                                <div class="browser-content">
-                                    <div class="website-preview restaurant">
-                                        <div class="preview-content">
-                                            <h5>Sushi Bar</h5>
-                                            <p>App Features</p>
-                                            <div class="preview-results">
-                                                <div class="result">Booking</div>
-                                                <div class="result">Order Ahead</div>
-                                                <div class="result">Menu</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
                                             </div>
                                         </div>
                                     </div>

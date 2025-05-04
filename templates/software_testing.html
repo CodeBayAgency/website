@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Software Testing - CodeBay</title>
-  
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBay - Software Testing</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
     <!-- Navigation -->
@@ -29,8 +29,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                   <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('home') }}#services">Services</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#who-for">Who We Serve</a>
@@ -49,149 +49,139 @@
         </div>
     </nav>
 
-   <!-- Hero Section -->
+    <!-- Hero Section -->
     <section id="hero" class="d-flex align-items-center">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
-                    <h1 class="display-4 fw-bold">Software Testing</h1>
-                    <h2 class="my-4">Ensure reliability and quality with our comprehensive software testing solutions.</h2>
-                    <p class="lead mb-5">Our meticulous testing services ensure your software runs smoothly, with bug detection, performance checks, and quality assurance tailored to your business needs.</p>
-                    <a href="#contact" class="btn btn-primary btn-lg px-5 py-3">Get a Free Consultation</a>
+                    <h1 class="display-4">Website Building for Business</h1>
+                    <h2 class="my-4">Look pro online – stunning websites built to grow your brand</h2> 
+                    <h3 class="mb-5">Get more than just a website — join this whop to get a free strategy call to diagnose your needs and a custom-built website designed to showcase your brand and attract customers.</h3>
+                    <a href="#contact" class="btn btn-primary btn-lg px-5 py-3">Contact Us</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Service Description -->
-    <section id="service-description" class="py-5">
+    <!-- Services Section -->
+    <section id="services" class="py-5">
         <div class="container">
             <div class="row text-center">
-                <div class="col-12 mb-5">
-                    <h2 class="section-title">Delivering Flawless Software Through Rigorous Testing</h2>
-                    <p class="section-subtitle">Our approach to software testing</p>
+                <div class="col-12">
+                    <h2 class="section-title">Here's what you'll get</h2>
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-lg-8 mx-auto text-center">
-                   <div class="mb-5">
-                        <p class="lead">
-                            In today's digital landscape, the success of your software hinges on its reliability and performance. At CodeBay, we understand the critical role that rigorous testing plays in ensuring your software meets the highest standards. Our Software Testing service is designed to identify and resolve issues before they impact your users, allowing you to launch with confidence.
-                        </p>
-                        <p>
-                            Our comprehensive testing approach covers everything from functionality to security, providing you with a complete assessment of your software's performance. With our expert team, you'll gain a clear understanding of how your software operates under different conditions, user scenarios, and security threats.
-                        </p>
-                   </div>
-                </div>
-             </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section id="benefits" class="py-5 bg-light">
-        <div class="container">
-             <div class="row text-center">
-                <div class="col-12 mb-5">
-                    <h2 class="section-title">Benefits of Professional Software Testing</h2>
-                    <p class="section-subtitle">Why choose CodeBay for your testing needs</p>
-                </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4 mb-4">
-                    <div class="benefit-card">
-                        <i class="fas fa-dollar-sign benefit-icon"></i>
-                        <h4>Reduced Development Costs</h4>
-                        <p>Fixing issues early is more cost-effective than addressing them post-launch.</p>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <div class="icon-container">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>Strategy call</h4>
+                        <p>We begin with a comprehensive consultation to understand your business needs, goals, and vision for your website.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="benefit-card">
-                         <i class="fas fa-thumbs-up benefit-icon"></i>
-                        <h4>Improved User Satisfaction</h4>
-                        <p>Reliable software leads to a better user experience and higher satisfaction.</p>
-                    </div>
-                </div>
-                 <div class="col-md-4 mb-4">
-                    <div class="benefit-card">
-                         <i class="fas fa-shield-alt benefit-icon"></i>
-                        <h4>Enhanced Security</h4>
-                        <p>Protect your data and your users' data with robust security testing.</p>
-                    </div>
-                </div>
-                 <div class="col-md-4 mb-4">
-                    <div class="benefit-card">
-                         <i class="fas fa-chart-line benefit-icon"></i>
-                        <h4>Increased Efficiency</h4>
-                        <p>Ensure your software can handle peak loads and perform smoothly.</p>
-                    </div>
-                </div>
-                 <div class="col-md-4 mb-4">
-                    <div class="benefit-card">
-                         <i class="fas fa-check benefit-icon"></i>
-                        <h4>Higher Software Quality</h4>
-                        <p>Ensure your software meets all business requirements.</p>
+                    <div class="service-card">
+                        <div class="icon-container">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>Website built around your business</h4>
+                        <p>Your website will be tailored specifically to your business model, industry standards, and target audience.</p>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="benefit-card">
-                         <i class="fas fa-clock benefit-icon"></i>
-                        <h4>Time to Market</h4>
-                        <p>Ensuring quality leads to faster deployment of your software.</p>
+                    <div class="service-card">
+                        <div class="icon-container">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>Tailored to your vision</h4>
+                        <p>We transform your ideas into a visually appealing and functionally effective digital presence.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <div class="icon-container">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>Clear process, no surprises</h4>
+                        <p>Our transparent workflow keeps you informed at every stage of development, from concept to launch.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <div class="icon-container">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>Affordable, transparent pricing</h4>
+                        <p>Get premium quality websites at competitive rates with no hidden fees or unexpected costs.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="service-card">
+                        <div class="icon-container">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h4>Mobile-ready from day one</h4>
+                        <p>All our websites are fully responsive and optimized for viewing on any device, ensuring a seamless user experience.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Who We Serve Section -->
+    <!-- Who This Is For Section -->
     <section id="who-for" class="py-5">
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
-                    <h2 class="section-title">Who We Serve</h2>
-                    <p class="section-subtitle mb-5">Our services are tailored to meet the needs of</p>
+                    <h2 class="section-title">Who this is for</h2>
                 </div>
             </div>
-             <div class="row mt-5">
-               <div class="col-lg-8 mx-auto">
-                  <p class="lead">
-                        Our Software Testing services are essential for startups, established businesses, and tech-forward companies seeking to ensure their software products are of the highest quality. We work with:
-                    </p>
-                     <div class="row mt-5">
-                       <div class="col-md-6 col-lg-3 mb-4">
-                         <div class="audience-card">
-                           <h4>Startups</h4>
-                           <p>Launching a new product? We make sure it's bug-free and ready for the market.</p>
-                         </div>
-                       </div>
-                       <div class="col-md-6 col-lg-3 mb-4">
-                         <div class="audience-card">
-                           <h4>Established Businesses</h4>
-                        <li class="mb-2"><strong>Established Businesses:</strong> Enhance your current software offerings with our rigorous testing processes.</li>
-                        <li class="mb-2"><strong>Tech Companies:</strong> Stay ahead with cutting-edge testing that keeps you innovative and competitive.</li>
-                        <li class="mb-2"><strong>E-commerce Platforms:</strong> Ensure flawless user journeys and transactions.</li>
-                         <li class="mb-2"><strong>Mobile App Developers:</strong> Guarantee seamless functionality and compatibility across devices.</li>
-                    </ul>
+            <div class="row mt-5">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="audience-card">
+                        <h4>Ecommerce Founders</h4>
+                        <p>Powerful online stores with optimized product displays, seamless checkout processes, and integrated payment gateways to maximize your sales potential.</p>
+                    </div>
                 </div>
-             </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="audience-card">
+                        <h4>Agencies & Service Providers</h4>
+                        <p>Professional websites that showcase your expertise, portfolio, and services with clear call-to-actions and client testimonials to build trust.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="audience-card">
+                        <h4>Creative Entrepreneurs</h4>
+                        <p>Visually striking platforms that highlight your creative work, engage your audience, and convert visitors into clients or customers.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="audience-card">
+                        <h4>Personal Brands & Influencers</h4>
+                        <p>Engaging websites that amplify your personal brand, connect with your followers, and create opportunities for partnerships and monetization.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-5">
+    <!-- Portfolio Section commented out for future usage -->
+    <!-- <section id="portfolio" class="py-5">
         <div class="container">
             <div class="row text-center">
-                <div class="col-12 mb-5">
-                    <h2 class="section-title">Our Software Testing Portfolio</h2>
-                    <p class="section-subtitle mb-5">Examples of our work and success stories</p>
+                <div class="col-12">
+                    <h2 class="section-title">Our Portfolio</h2>
+                    <p class="section-subtitle mb-5">Check out some of our recent projects</p>
                 </div>
             </div>
             <div class="row">
-               <div class="col-md-6 mb-4">
+                <div class="col-md-6 mb-4">
                     <div class="portfolio-item">
                         <div class="portfolio-info">
-                            <h4>FinTrack Security Audit</h4>
-                            <p>Conducted a comprehensive security audit for a fintech app, identifying and fixing vulnerabilities that protected user data and ensured compliance.</p>
+                            <h4>LuxHome Interior Design</h4>
+                            <p>A premium website for an interior design studio featuring portfolio galleries, client testimonials, and service descriptions.</p>
                         </div>
                         <div class="portfolio-preview">
                             <div class="browser-mockup">
@@ -201,17 +191,16 @@
                                         <span></span>
                                         <span></span>
                                     </div>
-                                    <div class="browser-address">fintrack-app.com</div>
+                                    <div class="browser-address">luxhome-interior.com</div>
                                 </div>
                                 <div class="browser-content">
-                                    <div class="website-preview testing">
+                                    <div class="website-preview">
                                         <div class="preview-content">
-                                            <h5>FinTrack</h5>
-                                            <p>Securing financial futures</p>
-                                            <div class="preview-services">
-                                               <div class="preview-service">Data Encryption</div>
-                                                <div class="preview-service">Secure Transactions</div>
-                                                <div class="preview-service">User Authentication</div>
+                                            <h5>LuxHome Interior</h5>
+                                            <p>Transform your space into a masterpiece</p>
+                                            <div class="preview-buttons">
+                                                <a href="#" class="preview-btn">View Gallery</a>
+                                                <a href="#" class="preview-btn">Our Services</a>
                                             </div>
                                         </div>
                                     </div>
@@ -220,76 +209,195 @@
                         </div>
                     </div>
                 </div>
-                 <div class="col-md-6 mb-4">
+                <div class="col-md-6 mb-4">
                     <div class="portfolio-item">
                         <div class="portfolio-info">
-                            <h4>GameOn - Mobile App Performance Optimization</h4>
-                            <p>Performed rigorous performance testing on a mobile gaming app, leading to a 40% reduction in load times and improved user retention.</p>
+                            <h4>FitLife Nutrition Store</h4>
+                            <p>An e-commerce website for health supplements with product categorization, search functionality, and secure checkout.</p>
                         </div>
-                         <div class="portfolio-preview">
+                        <div class="portfolio-preview">
                             <div class="browser-mockup">
-                               <div class="browser-toolbar">
-                                    <div class="browser-dots"><span></span><span></span><span></span></div>
-                                    <div class="browser-address">gameon-app.com</div>
-                               </div>
-                           </div>
+                                <div class="browser-toolbar">
+                                    <div class="browser-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="browser-address">fitlife-nutrition.com</div>
+                                </div>
+                                <div class="browser-content">
+                                    <div class="website-preview ecommerce">
+                                        <div class="preview-content">
+                                            <h5>FitLife Nutrition</h5>
+                                            <p>Premium supplements for optimal health</p>
+                                            <div class="preview-categories">
+                                                <span>Proteins</span>
+                                                <span>Vitamins</span>
+                                                <span>Workout</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="portfolio-item">
+                        <div class="portfolio-info">
+                            <h4>Creative Vision Photography</h4>
+                            <p>A photographer's portfolio website with image galleries, booking system, and client area for image delivery.</p>
+                        </div>
+                        <div class="portfolio-preview">
+                            <div class="browser-mockup">
+                                <div class="browser-toolbar">
+                                    <div class="browser-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="browser-address">creative-vision-photo.com</div>
+                                </div>
+                                <div class="browser-content">
+                                    <div class="website-preview photography">
+                                        <div class="preview-content">
+                                            <h5>Creative Vision</h5>
+                                            <p>Capturing moments, creating memories</p>
+                                            <div class="preview-gallery">
+                                                <div class="preview-thumbnail"></div>
+                                                <div class="preview-thumbnail"></div>
+                                                <div class="preview-thumbnail"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="portfolio-item">
+                        <div class="portfolio-info">
+                            <h4>TechSolutions Consulting</h4>
+                            <p>A corporate website for an IT consulting firm featuring service descriptions, case studies, and team profiles.</p>
+                        </div>
+                        <div class="portfolio-preview">
+                            <div class="browser-mockup">
+                                <div class="browser-toolbar">
+                                    <div class="browser-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="browser-address">techsolutions-consulting.com</div>
+                                </div>
+                                <div class="browser-content">
+                                    <div class="website-preview corporate">
+                                        <div class="preview-content">
+                                            <h5>TechSolutions</h5>
+                                            <p>Enterprise IT solutions for modern business</p>
+                                            <div class="preview-services">
+                                                <div class="preview-service">Cloud Migration</div>
+                                                <div class="preview-service">Cybersecurity</div>
+                                                <div class="preview-service">DevOps</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-5 bg-light">
+    <section id="faq" class="py-5">
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
                     <h2 class="section-title">Frequently Asked Questions</h2>
-                    <p class="section-subtitle mb-5">Everything you need to know about our Software Testing services</p>
                 </div>
             </div>
-             <div class="row mt-5">
-                 <div class="col-lg-8 mx-auto">
-                     <div class="accordion" id="faqAccordion">
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                   Why is software testing important?
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    How long does it take to build a website?
                                 </button>
                             </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Software testing is critical to ensure the quality, reliability, and security of your software. It identifies bugs, performance issues, and vulnerabilities before they affect your users or business.
+                                    Our typical timeline is 2-4 weeks from our initial strategy call to website launch. Simple websites may be completed in as little as 1-2 weeks, while more complex projects with extensive functionality can take 4-6 weeks. We'll provide you with a specific timeline during our strategy call based on your project requirements.
                                 </div>
                             </div>
                         </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    What types of testing do you perform?
+                                    What information do you need from me to get started?
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    We offer a comprehensive suite of testing services, including functional, performance, security, usability, and compatibility testing. We tailor our approach to meet the specific needs of your software.
+                                    To get started, we'll need your business information (logo, branding guidelines if available), content for your pages (text, images, videos), and your goals for the website. During our strategy call, we'll guide you through exactly what's needed and help you organize your materials for the most efficient development process.
                                 </div>
                             </div>
                         </div>
-                         <div class="accordion-item">
+                        <div class="accordion-item">
                             <h2 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                   How do you ensure the security of our software during testing?
+                                    How much does a website cost?
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Security is paramount in our testing process. We employ robust methods to identify vulnerabilities and ensure that your software is secure against potential threats.
+                                    Our website packages start at $1,500 for basic business websites and range up to $5,000+ for complex e-commerce or custom functionality websites. We provide transparent, all-inclusive pricing with no hidden fees. During our strategy call, we'll assess your needs and provide an exact quote based on your specific requirements.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Do you offer website maintenance after launch?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, we offer monthly maintenance packages to ensure your site stays secure, updated, and performing optimally. Our maintenance plans include regular backups, security monitoring, performance optimization, content updates, and technical support. Packages start at $99/month and can be tailored to your specific needs.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    Will my website be mobile-friendly?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Absolutely! All of our websites are built using responsive design principles, ensuring they look and function perfectly on all devices, from desktop computers to tablets and smartphones. We rigorously test on multiple devices and screen sizes to guarantee a seamless experience for all users.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingSix">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    Do you help with domain registration and hosting?
+                                </button>
+                            </h2>
+                            <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, we provide full domain and hosting setup services. We can either help you purchase a new domain and set up hosting, or we can work with your existing domain and hosting provider. Our team handles all technical aspects of deployment so you don't have to worry about the technical details.
                                 </div>
                             </div>
                         </div>
                     </div>
-                 </div>
-             </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -297,16 +405,23 @@
     <section id="contact" class="py-5">
         <div class="container">
             <div class="row text-center">
-                <div class="col-12 mb-5">
-                    <h2 class="section-title">Let's Get Started</h2>
-                    <p class="section-subtitle mb-5">Interested in our Software Testing services? Let's discuss your project!</p>
+                <div class="col-12">
+                    <h2 class="section-title">Contact Us</h2>
+                    <p class="section-subtitle mb-5">Ready to transform your online presence? Get in touch today!</p>
                 </div>
             </div>
-            <div class="row justify-content-center">
-               <div class="col-lg-8">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
                     <div class="contact-form-container">
-                        <form class="contact-form" action="{{ url_for('contact') }}" method="POST">
-
+                        {% with messages = get_flashed_messages(with_categories=true) %}
+                            {% if messages %}
+                                {% for category, message in messages %}
+                                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                                {% endfor %}
+                            {% endif %}
+                        {% endwith %}
+                        <form action="{{ url_for('contact') }}" method="POST" class="contact-form">
+                            <div class="row">
                                 <div class="col-md-6 mb-4">
                                     <div class="form-group">
                                         <label for="name" class="form-label">Your Name</label>
@@ -319,9 +434,10 @@
                                         <input type="email" class="form-control" id="email" name="email" required>
                                     </div>
                                 </div>
+                            </div>
                             <div class="phone-fields-container">
-                               <div class="country-code-container">
-                                    <label for="countryCode" class="form-label">Country Code</label>
+                                <div class="country-code-container">
+                                    <label for="countryCode" class="form-label">CC</label>
                                     <input type="text" class="form-control" id="countryCode" name="countryCode" placeholder="+1" maxlength="4">
                                 </div>
                                 <div class="phone-number-container">
@@ -336,13 +452,6 @@
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary px-5 py-3">Send Message</button>
                             </div>
-                            {% with messages = get_flashed_messages(with_categories=true) %}
-                                {% if messages %}
-                                    {% for category, message in messages %}
-                                        <div class="alert alert-{{ category }} mt-4">{{ message }}</div>
-                                    {% endfor %}
-                                {% endif %}
-                            {% endwith %}
                         </form>
                     </div>
                 </div>
@@ -357,12 +466,12 @@
                 <div class="col-md-6 text-center text-md-start">
                     <p class="mb-0">&copy; 2025 CodeBay. All rights reserved.</p>
                 </div>
-                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                <div class="col-md-6 text-center text-md-end">
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="mailto:codebay.agency@gmail.com"><i class="fas fa-envelope"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="mailto:codebay.agency@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
@@ -377,5 +486,5 @@
     
     <!-- Custom JS -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-  </body>
+</body>
 </html>
