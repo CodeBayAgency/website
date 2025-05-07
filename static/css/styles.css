@@ -991,6 +991,10 @@ footer {
     .testimonial-content p {
         font-size: 1rem;
     }
+    
+    .video-container {
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 575px) {
