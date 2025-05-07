@@ -126,11 +126,8 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkReveal);
     
     // EmailJS initialization
-    if (window.emailjs) {
-        emailjs.init({
-            publicKey: "jkLAd8X0aWHM4emed",
-        });
-    }
+    emailjs.init("jkLAd8X0aWHM4emed");
+
     
     // Contact form submission with EmailJS
     const contactForm = document.querySelector('.contact-form');
@@ -151,23 +148,23 @@ document.addEventListener('DOMContentLoaded', function() {
             // Make sure country code starts with +
             if (countryCode && !countryCode.startsWith('+')) {
                 countryCode = '+' + countryCode;
-            }
-            const phone = this.querySelector('#phone').value || '';
-            const phoneNumber = phone ? (countryCode + ' ' + phone) : '';
-            const message = this.querySelector('#message').value;
+            };
+            const phone = this.querySelector('#phone').value;
+            const prefix = countryCode
+            const message = this.querySelector('#message').value
             
             // Prepare template parameters for EmailJS
             const templateParams = {
-                name: name,
-                email: email,
-                phone: phoneNumber,
+                from_name: name,
+                from_email: email,
+                prefix: prefix,
+                phone: phone,
                 message: message,
-                subject: 'Contact Form Submission',
-                to_email: 'codebay.agency@gmail.com' // The recipient email
             };
+
             
             // Send email using EmailJS
-            emailjs.send('default_service', 'template_contact', templateParams)
+            emailjs.send('service_8etewic', 'template_4aychwg', templateParams)
                 .then(function(response) {
                     console.log('Email sent successfully:', response);
                     
