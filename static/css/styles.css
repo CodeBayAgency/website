@@ -955,6 +955,7 @@ footer {
     .video-container {
         height: 250px;
         margin-top: 30px;
+        margin-bottom: 30px;
     }
     
     .about-image-container {
