@@ -923,6 +923,10 @@ footer {
         margin-top: 10px;
     }
     
+    #hero .btn-primary {
+        margin-bottom: 30px;
+    }
+    
     #hero {
         padding-top: 100px;
         min-height: auto;
