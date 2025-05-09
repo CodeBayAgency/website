@@ -328,21 +328,14 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
-                    <h2 class="section-title">Contact Us</h2>
-                    <p class="section-subtitle mb-5">Ready to transform your online presence? Get in touch today!</p>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle mb-5">Ready to discuss your project? Reach out to us!</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
                     <div class="contact-form-container">
-                        {% with messages = get_flashed_messages(with_categories=true) %}
-                            {% if messages %}
-                                {% for category, message in messages %}
-                                    <div class="alert alert-{{ category }}">{{ message }}</div>
-                                {% endfor %}
-                            {% endif %}
-                        {% endwith %}
-                        <form action="{{ url_for('contact') }}" method="POST" class="contact-form">
+                        <form class="contact-form" action="{{ url_for('contact') }}" method="POST">
                             <div class="row">
                                 <div class="col-md-6 mb-4">
                                     <div class="form-group">
@@ -360,7 +353,7 @@
                             <div class="phone-fields-container">
                                 <div class="country-code-container">
                                     <label for="countryCode" class="form-label">CC</label>
- <input type="text" class="form-control" id="countryCode" name="countryCode" placeholder="+1" maxlength="4" pattern="^\+?\d*$">
+                                    <input type="text" class="form-control" id="countryCode" name="countryCode" placeholder="+1" maxlength="4">
                                 </div>
                                 <div class="phone-number-container">
                                     <label for="phone" class="form-label">Phone Number</label>
@@ -374,6 +367,13 @@
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary px-5 py-3">Send Message</button>
                             </div>
+                            {% with messages = get_flashed_messages(with_categories=true) %}
+                                {% if messages %}
+                                    {% for category, message in messages %}
+                                        <div class="alert alert-{{ category }} mt-4">{{ message }}</div>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endwith %}
                         </form>
                     </div>
                 </div>

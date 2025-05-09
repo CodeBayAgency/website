@@ -193,7 +193,7 @@
                                     <span>UX Design</span>
                                 </div>
                             </div>
-                            <a href="https://your-restaurant-app.lovable.app/" class="btn btn-primary mb-3 ml-3" target="_blank" rel="noopener noreferrer">
+                            <a href="https://your-restaurant-app.lovable.app/" class="btn btn-primary mb-3" target="_blank" rel="noopener noreferrer">
                                 View Demo App
                             </a>
                         </div>
@@ -360,8 +360,8 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
-                    <h2 class="section-title">Contact Us</h2>
-                    <p class="section-subtitle mb-5">Interested in our IT consulting services? Let's discuss your needs!</p>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle mb-5">Ready to discuss your project? Reach out to us!</p>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -383,16 +383,10 @@
                                 </div>
                             </div>
                             <div class="phone-fields-container">
-
-                            </div>
-                            <div class="phone-fields-container">
-
-                            </div>
-                            <div class="phone-fields-container">
                                 <div class="country-code-container">
                                     <label for="countryCode" class="form-label">CC</label>
                                     <input type="text" class="form-control" id="countryCode" name="countryCode" placeholder="+1" maxlength="4">
-                                </div>                                <div class="phone-number-container">
+                                </div>
                                 <div class="phone-number-container">
                                     <label for="phone" class="form-label">Phone Number</label>
                                     <input type="tel" class="form-control" id="phone" name="phone">
@@ -412,7 +406,6 @@
                                     {% endfor %}
                                 {% endif %}
                             {% endwith %}
-
                         </form>
                     </div>
                 </div>
@@ -441,6 +434,9 @@
 
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- EmailJS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     
     <!-- Custom JS -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
