@@ -131,6 +131,46 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Contact form submission with EmailJS
     const contactForm = document.querySelector('.contact-form');
+    const countryCodeInput = contactForm ? contactForm.querySelector('#countryCode') : null;
+    const phoneInput = contactForm ? contactForm.querySelector('#phone') : null;
+    
+    // Add input restriction and auto '+' to country code field
+    if (countryCodeInput) {
+        countryCodeInput.addEventListener('input', function(e) {
+            let value = this.value.replace(/\D/g, ''); // Remove non-digits
+            if (value) {
+                this.value = '+' + value;
+            } else {
+                this.value = ''; // Keep empty if no digits
+            }
+        });
+
+        // Prevent non-numeric and non-plus keys
+        countryCodeInput.addEventListener('keydown', function(e) {
+            // Allow: backspace, delete, tab, escape, enter
+            if ([46, 8, 9, 27, 13].indexOf(e.keyCode) !== -1 ||
+                // Allow: Ctrl+A, Command+A
+                (e.keyCode === 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+                // Allow: home, end, left, right, down, up
+                (e.keyCode >= 35 && e.keyCode <= 40)) {
+                // let it happen, don't do anything
+                return;
+            }
+            // Ensure that it is a number or the plus key (for the first character)
+            // Plus key is keycode 187 shifted or keycode 107 on numpad
+            if ((e.shiftKey && e.keyCode === 187) || e.keyCode === 107) {
+                 // Allow '+' only if the field is empty
+                 if (this.value.length === 0) {
+                    return;
+                 }
+            }
+            // Ensure it is a number and stop the keypress
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
+        });
+    }
+
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -138,18 +178,16 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Update UI to show loading state
             const submitButton = this.querySelector('button[type="submit"]');
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitButton.disabled = true;
-            
+
             // Get form data
             const name = this.querySelector('#name').value;
             const email = this.querySelector('#email').value;
-            let countryCode = this.querySelector('#countryCode').value || '';
+            let countryCode = countryCodeInput ? countryCodeInput.value.trim() : '';
             // Make sure country code starts with +
             if (countryCode && !countryCode.startsWith('+')) {
                 countryCode = '+' + countryCode;
             };
-            const phone = this.querySelector('#phone').value;
+            const phone = phoneInput ? phoneInput.value.trim() : '';
             const prefix = countryCode
             const message = this.querySelector('#message').value
             
@@ -162,6 +200,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 message: message,
             };
 
+            // Validation: Country code mandatory if phone is filled
+            if (phone && !countryCode) {
+                showEmailStatus('error', 'Please enter the country code if you provide a phone number.');
+                return; // Prevent form submission
+            }
+
+            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+            submitButton.disabled = true;
             
             // Send email using EmailJS
             emailjs.send('service_8etewic', 'template_4aychwg', templateParams)
