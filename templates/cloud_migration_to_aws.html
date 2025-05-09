@@ -375,11 +375,11 @@
                             <div class="phone-fields-container">
                                 <div class="country-code-container">
                                     <label for="countryCode" class="form-label">CC</label>
-                                    <input type="text" class="form-control" id="countryCode" name="countryCode" placeholder="+1" maxlength="4">
+ <input type="text" class="form-control" id="countryCode" name="countryCode" placeholder="+1" maxlength="4" pattern="^\+\d+$" title="Please enter a valid country code starting with +" inputmode="numeric">
                                 </div>
                                 <div class="phone-number-container">
                                     <label for="phone" class="form-label">Phone Number</label>
-                                    <input type="tel" class="form-control" id="phone" name="phone">
+ <input type="tel" class="form-control" id="phone" name="phone" pattern="[0-9]+" title="Please enter only numbers">
                                 </div>
                             </div>
                             <div class="form-group mb-4">
