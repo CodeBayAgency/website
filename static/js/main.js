@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 videoContainer.innerHTML = `
                     <div class="video-message">
                         <i class="fas fa-video"></i>
-                        <p>Video would play here in production</p>
+                        <p>Video will be available soon</p>
                     </div>
                 `;
             }, 1500);
