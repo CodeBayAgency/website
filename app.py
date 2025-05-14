@@ -23,7 +23,7 @@ def home():
 @app.route('/services/website-building')
 def website_building():
     """Website building service page"""
-    return render_template('index.html')
+    return render_template('website_building.html')
 
 # Software Testing Service
 
