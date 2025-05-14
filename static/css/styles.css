@@ -5,9 +5,9 @@
     --highlight-color: #3B82F6;
     --highlight-hover: #2563eb;
     --text-color: #ffffff;
-    --text-muted: #a0a0c0;
-    --border-color: #3a3a50;
-    --card-bg: #2a2a3a;
+    --text-muted: #A6A6C4; /* Previously: #a0a0c0; */
+    --border-color: #A6A6C4; /* Alternatively: (darker) #3a3a50 */
+    --card-bg:  #3B3B55;/*  Alternatively: (darker) #3B3B55; (lighter) #44445c; */
     --success-color: #10b981;
     --warning-color: #f59e0b;
     --error-color: #ef4444;
