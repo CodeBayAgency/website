@@ -13,9 +13,10 @@ app.secret_key = os.environ.get("SESSION_SECRET", "dev-secret-key")
 
 
 @app.route('/')
+@app.route('/home')
 def home():
     """Home page with all services"""
-    return render_template('home.html')
+    return render_template('index.html')
 
 # Website Building Service
 
