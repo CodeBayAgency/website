@@ -131,7 +131,7 @@ a:hover {
     background-color: var(--highlight-hover);
 }
 
-.nav-link:focus {
+.nav-link:focus-visible {
     outline: 2px solid #007bff; /* Kolor obramowania przy focusie */
     outline-offset: 2px; /* Odstęp między ikoną a obramowaniem */
     border-radius: 4px; /* Opcjonalnie — lekko zaokrąglone rogi */

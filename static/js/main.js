@@ -1,9 +1,3 @@
-/**
- * CodeBay - Software Solutions Agency
- * Main JavaScript file for interactive elements
- * Includes Scroll Spy feature for navigation
- */
-
 document.addEventListener('DOMContentLoaded', function() {
     
     // Navbar scroll behavior
@@ -72,9 +66,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
 
-            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            if (scrollPos >= sectionTop - window.innerHeight / 3 && scrollPos < sectionTop + sectionHeight) {
                 current = section.getAttribute('id');
             }
+
         });
 
         navLinks.forEach(link => {
