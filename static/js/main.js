@@ -65,11 +65,20 @@ document.addEventListener('DOMContentLoaded', function() {
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.offsetHeight;
+            const triggerPoint = sectionTop - window.innerHeight / 3;
 
-            if (scrollPos >= sectionTop - window.innerHeight / 3 && scrollPos < sectionTop + sectionHeight) {
-                current = section.getAttribute('id');
+            if (scrollPos >= triggerPoint && scrollPos < sectionTop + sectionHeight) {
+                // If this section belongs to a group (e.g., "benefits"), assign that ID
+                if (section.classList.contains('benefit-section')) {
+                    current = 'benefits';
+                } 
+                else if (section.classList.contains('for-clients-section')) {
+                    current = 'who-for';
+                }
+                else {
+                    current = section.getAttribute('id');
+                }
             }
-
         });
 
         navLinks.forEach(link => {
