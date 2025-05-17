@@ -116,6 +116,10 @@ a:hover {
     color: var(--highlight-color);
 }
 
+.navbar-nav .nav-link.active {
+    color: var(--highlight-color);
+}
+
 .navbar-nav .nav-link.btn {
     color: white;
     margin-left: 1rem;

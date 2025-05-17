@@ -1,6 +1,7 @@
 /**
  * CodeBay - Software Solutions Agency
  * Main JavaScript file for interactive elements
+ * Includes Scroll Spy feature for navigation
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -59,6 +60,41 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Scroll Spy feature
+    const sections = document.querySelectorAll('section'); // Assuming sections are wrapped in <section> tags with IDs
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    function activateNavLink() {
+        let current = '';
+        const scrollPos = window.scrollY + navbar.offsetHeight + 1; // Add navbar height to account for fixed header
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === current) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    // Call on load
+    activateNavLink();
+
+    // Listen for scroll events
+    window.addEventListener('scroll', activateNavLink);
+
+    // Also update on resize to account for height changes
+    window.addEventListener('resize', activateNavLink);
+
+
     // Portfolio website preview hover effects
     const portfolioItems = document.querySelectorAll('.portfolio-item');
     
