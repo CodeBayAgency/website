@@ -947,6 +947,10 @@ footer {
     #hero .btn-primary {
         margin-bottom: 100px;
     }
+
+    #hero .home-page-btn {
+        margin-bottom: 10px;
+    }
     
     #hero {
         padding-top: 200px;
