@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
     // Navbar scroll behavior
     const navbar = document.querySelector('.navbar');
     const navbarHeight = navbar.offsetHeight;
@@ -139,23 +138,23 @@ document.addEventListener('DOMContentLoaded', function() {
         element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     });
     
-    // Video placeholder interaction
     const videoPlaceholder = document.querySelector('.video-placeholder');
     if (videoPlaceholder) {
-        videoPlaceholder.addEventListener('click', function() {
-            // In a real implementation, this would play the video
-            // For demo purposes, we'll just show an animation
-            this.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i><span>Loading video...</span>';
-            
-            setTimeout(() => {
-                const videoContainer = this.closest('.video-container');
+        videoPlaceholder.addEventListener('click', function () {
+            const videoContainer = document.querySelector('.video-container');
+            if (videoContainer) {
                 videoContainer.innerHTML = `
-                    <div class="video-message">
-                        <i class="fas fa-video"></i>
-                        <p>Video will be available soon</p>
+                    <div class="video-embed">
+                        <iframe 
+                            src="https://www.youtube.com/embed/uxbs4SPJGTI?autoplay=1"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
                     </div>
                 `;
-            }, 1500);
+            }
         });
     }
     
