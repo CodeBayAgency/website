@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
   # Allows you to run the workflow manually from the Actions tab
-  workflworkflow_dispatch:
+  workflow_dispatch:
 
 # A workflow run is made of one or more jobs that can run sequentially or in parallel
 jobs: 
