@@ -1014,6 +1014,10 @@ footer {
     .service-card, .audience-card, .portfolio-card {
         padding: 1.5rem;
     }
+
+    .portfolio-card-container {
+        margin-bottom: 1rem;
+    }
     
     .contact-form-container, .testimonial-container {
         padding: 1.5rem;
